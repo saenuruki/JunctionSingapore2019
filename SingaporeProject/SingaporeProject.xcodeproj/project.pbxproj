@@ -14,6 +14,16 @@
 		BACCF564233C8572000E83C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACCF562233C8572000E83C8 /* LaunchScreen.storyboard */; };
 		BACCF56F233C8572000E83C8 /* SingaporeProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACCF56E233C8572000E83C8 /* SingaporeProjectTests.swift */; };
 		BACCF57A233C8572000E83C8 /* SingaporeProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACCF579233C8572000E83C8 /* SingaporeProjectUITests.swift */; };
+		BACCF589233C8854000E83C8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACCF588233C8854000E83C8 /* Alamofire.framework */; };
+		BACCF58D233C886C000E83C8 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACCF58C233C886C000E83C8 /* AlamofireObjectMapper.framework */; };
+		BACCF58F233C887D000E83C8 /* FloatingPanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACCF58E233C887D000E83C8 /* FloatingPanel.framework */; };
+		BACCF591233C888C000E83C8 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACCF590233C888C000E83C8 /* Kingfisher.framework */; };
+		BACCF593233C889B000E83C8 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACCF592233C889B000E83C8 /* ObjectMapper.framework */; };
+		BACCF595233C88AD000E83C8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACCF594233C88AD000E83C8 /* RxCocoa.framework */; };
+		BACCF597233C88BC000E83C8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACCF596233C88BC000E83C8 /* RxSwift.framework */; };
+		BACCF599233C88CD000E83C8 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACCF598233C88CD000E83C8 /* SnapKit.framework */; };
+		BACCF59B233C88DD000E83C8 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACCF59A233C88DC000E83C8 /* SVProgressHUD.framework */; };
+		BACCF59D233C88EC000E83C8 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACCF59C233C88EC000E83C8 /* XLPagerTabStrip.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +57,17 @@
 		BACCF575233C8572000E83C8 /* SingaporeProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingaporeProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACCF579233C8572000E83C8 /* SingaporeProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingaporeProjectUITests.swift; sourceTree = "<group>"; };
 		BACCF57B233C8572000E83C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BACCF588233C8854000E83C8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		BACCF58A233C885B000E83C8 /* Build */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Build; path = Carthage/Build; sourceTree = "<group>"; };
+		BACCF58C233C886C000E83C8 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		BACCF58E233C887D000E83C8 /* FloatingPanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FloatingPanel.framework; path = Carthage/Build/iOS/FloatingPanel.framework; sourceTree = "<group>"; };
+		BACCF590233C888C000E83C8 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		BACCF592233C889B000E83C8 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		BACCF594233C88AD000E83C8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		BACCF596233C88BC000E83C8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		BACCF598233C88CD000E83C8 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		BACCF59A233C88DC000E83C8 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
+		BACCF59C233C88EC000E83C8 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = Carthage/Build/iOS/XLPagerTabStrip.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +75,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BACCF59D233C88EC000E83C8 /* XLPagerTabStrip.framework in Frameworks */,
+				BACCF59B233C88DD000E83C8 /* SVProgressHUD.framework in Frameworks */,
+				BACCF599233C88CD000E83C8 /* SnapKit.framework in Frameworks */,
+				BACCF597233C88BC000E83C8 /* RxSwift.framework in Frameworks */,
+				BACCF595233C88AD000E83C8 /* RxCocoa.framework in Frameworks */,
+				BACCF593233C889B000E83C8 /* ObjectMapper.framework in Frameworks */,
+				BACCF591233C888C000E83C8 /* Kingfisher.framework in Frameworks */,
+				BACCF58F233C887D000E83C8 /* FloatingPanel.framework in Frameworks */,
+				BACCF58D233C886C000E83C8 /* AlamofireObjectMapper.framework in Frameworks */,
+				BACCF589233C8854000E83C8 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +112,7 @@
 				BACCF56D233C8572000E83C8 /* SingaporeProjectTests */,
 				BACCF578233C8572000E83C8 /* SingaporeProjectUITests */,
 				BACCF557233C8571000E83C8 /* Products */,
+				BACCF587233C8854000E83C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +157,24 @@
 			path = SingaporeProjectUITests;
 			sourceTree = "<group>";
 		};
+		BACCF587233C8854000E83C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BACCF59C233C88EC000E83C8 /* XLPagerTabStrip.framework */,
+				BACCF59A233C88DC000E83C8 /* SVProgressHUD.framework */,
+				BACCF598233C88CD000E83C8 /* SnapKit.framework */,
+				BACCF596233C88BC000E83C8 /* RxSwift.framework */,
+				BACCF594233C88AD000E83C8 /* RxCocoa.framework */,
+				BACCF592233C889B000E83C8 /* ObjectMapper.framework */,
+				BACCF590233C888C000E83C8 /* Kingfisher.framework */,
+				BACCF58E233C887D000E83C8 /* FloatingPanel.framework */,
+				BACCF58C233C886C000E83C8 /* AlamofireObjectMapper.framework */,
+				BACCF58A233C885B000E83C8 /* Build */,
+				BACCF588233C8854000E83C8 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +185,7 @@
 				BACCF552233C8571000E83C8 /* Sources */,
 				BACCF553233C8571000E83C8 /* Frameworks */,
 				BACCF554233C8571000E83C8 /* Resources */,
+				BACCF59E233C890D000E83C8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,6 +301,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BACCF59E233C890D000E83C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/XLPagerTabStrip.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FloatingPanel.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BACCF552233C8571000E83C8 /* Sources */ = {
@@ -434,6 +515,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 679U29FZ6S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SingaporeProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -453,6 +538,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 679U29FZ6S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SingaporeProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (

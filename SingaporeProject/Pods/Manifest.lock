@@ -1,4 +1,11 @@
 PODS:
+  - ARCore/Base (1.12.0)
+  - ARCore/CloudAnchors (1.12.0):
+    - ARCore/Base (~> 1.12)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.2)
+    - Protobuf (~> 3.5)
   - Firebase/Core (6.6.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.1.0)
@@ -46,6 +53,11 @@ PODS:
   - GoogleDataTransportCCTSupport (1.0.1):
     - GoogleDataTransport (~> 1.1)
     - nanopb
+  - GoogleToolboxForMac/Defines (2.2.1)
+  - GoogleToolboxForMac/Logger (2.2.1):
+    - GoogleToolboxForMac/Defines (= 2.2.1)
+  - "GoogleToolboxForMac/NSData+zlib (2.2.1)":
+    - GoogleToolboxForMac/Defines (= 2.2.1)
   - GoogleUtilities/AppDelegateSwizzler (6.2.5):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -64,6 +76,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.2.5):
     - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (1.2.2)
   - Hero (1.4.0)
   - leveldb-library (1.20)
   - nanopb (0.3.901):
@@ -71,11 +84,13 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - Protobuf (3.9.2)
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
 
 DEPENDENCIES:
+  - ARCore/CloudAnchors (~> 1.12.0)
   - Firebase/Core
   - Firebase/Database
   - Hero
@@ -83,6 +98,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ARCore
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuthInterop
@@ -94,14 +110,18 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
+    - GoogleToolboxForMac
     - GoogleUtilities
+    - GTMSessionFetcher
     - Hero
     - leveldb-library
     - nanopb
+    - Protobuf
     - R.swift
     - R.swift.Library
 
 SPEC CHECKSUMS:
+  ARCore: 33ee7ed8c1571d840d49cda8fad52efc611f742b
   Firebase: a2b5951f30ff38fd3b3bdae9c7d340f940fd3c51
   FirebaseAnalytics: 48414ae5cbf6976d8a2f7177e0466540e5ab33ce
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
@@ -113,13 +133,16 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 47285fa897e5a125df56b9ef8750a1d81e4598a8
   GoogleDataTransport: ffbadce4ab93c88fb9dd8e6366c47bfcb4a32193
   GoogleDataTransportCCTSupport: 3451e7d8ba19093e533362a6d78d6d9014c6a037
+  GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
   GoogleUtilities: e7dc37039b19df7fe543479d3e4a02ac8d11bb69
+  GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  Protobuf: 67fb42ba613def994e61854de2b3164f13790cc4
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
 
-PODFILE CHECKSUM: dc2457793a4e87e3b665b7b1a78807baf16d1f48
+PODFILE CHECKSUM: ed126fb16204bfd730f260ea457ef59444681ff0
 
 COCOAPODS: 1.7.4

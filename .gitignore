@@ -31,7 +31,7 @@ xcuserdata
 Carthage/
 
 ## Cocoapods
-Pods/*
+Pods/
 Podfile.lock
 
 ## R.swift

@@ -10,16 +10,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Guest View Controller-->
         <scene sceneID="Rcy-QF-WKj">
             <objects>
-                <viewController id="reZ-8U-RZx" sceneMemberID="viewController">
+                <viewController id="reZ-8U-RZx" customClass="ARGuestViewController" customModule="SingaporeProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o1G-gh-vIH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMa-zY-8ej">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <connections>
+                                    <outlet property="delegate" destination="reZ-8U-RZx" id="WAD-Hj-anX"/>
+                                </connections>
+                            </arscnView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OMa-zY-8ej" firstAttribute="top" secondItem="o1G-gh-vIH" secondAttribute="top" id="8gj-sm-eBa"/>
+                            <constraint firstItem="OMa-zY-8ej" firstAttribute="leading" secondItem="DMc-q2-RKD" secondAttribute="leading" id="Gg3-oT-gzt"/>
+                            <constraint firstItem="DMc-q2-RKD" firstAttribute="bottom" secondItem="OMa-zY-8ej" secondAttribute="bottom" id="jRk-yG-gDH"/>
+                            <constraint firstItem="DMc-q2-RKD" firstAttribute="trailing" secondItem="OMa-zY-8ej" secondAttribute="trailing" id="jhh-mv-LX9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DMc-q2-RKD"/>
                     </view>
+                    <connections>
+                        <outlet property="sceneView" destination="OMa-zY-8ej" id="zmX-er-T01"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxr-TU-U3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

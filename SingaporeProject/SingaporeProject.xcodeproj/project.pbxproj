@@ -15,6 +15,13 @@
 		BA765643233DAA9000C0ADD1 /* ARAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765642233DAA9000C0ADD1 /* ARAdminViewController.swift */; };
 		BA765645233DAA9D00C0ADD1 /* ARGuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765644233DAA9D00C0ADD1 /* ARGuestViewController.swift */; };
 		BA765648233DAAE200C0ADD1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765647233DAAE200C0ADD1 /* MainTabBarController.swift */; };
+		BA76564A233DB26800C0ADD1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA765649233DB26800C0ADD1 /* GoogleService-Info.plist */; };
+		BA76564C233DB45800C0ADD1 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA76564B233DB45800C0ADD1 /* APIKeys.swift */; };
+		BA76564F233DB85300C0ADD1 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA76564E233DB85300C0ADD1 /* FirestoreManager.swift */; };
+		BA765652233DB9B900C0ADD1 /* PickerFloatingPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA765651233DB9B900C0ADD1 /* PickerFloatingPanel.storyboard */; };
+		BA765654233DBB4600C0ADD1 /* PickerFloatingPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765653233DBB4600C0ADD1 /* PickerFloatingPanelViewController.swift */; };
+		BA765656233DBB6C00C0ADD1 /* ARAdminViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765655233DBB6C00C0ADD1 /* ARAdminViewModel.swift */; };
+		BA765659233DBC7A00C0ADD1 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765658233DBC7A00C0ADD1 /* Event.swift */; };
 		BACCF55A233C8571000E83C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACCF559233C8571000E83C8 /* AppDelegate.swift */; };
 		BACCF55F233C8571000E83C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACCF55D233C8571000E83C8 /* Main.storyboard */; };
 		BACCF561233C8572000E83C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACCF560233C8572000E83C8 /* Assets.xcassets */; };
@@ -65,6 +72,13 @@
 		BA765642233DAA9000C0ADD1 /* ARAdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAdminViewController.swift; sourceTree = "<group>"; };
 		BA765644233DAA9D00C0ADD1 /* ARGuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARGuestViewController.swift; sourceTree = "<group>"; };
 		BA765647233DAAE200C0ADD1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		BA765649233DB26800C0ADD1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA76564B233DB45800C0ADD1 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		BA76564E233DB85300C0ADD1 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		BA765651233DB9B900C0ADD1 /* PickerFloatingPanel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickerFloatingPanel.storyboard; sourceTree = "<group>"; };
+		BA765653233DBB4600C0ADD1 /* PickerFloatingPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerFloatingPanelViewController.swift; sourceTree = "<group>"; };
+		BA765655233DBB6C00C0ADD1 /* ARAdminViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAdminViewModel.swift; sourceTree = "<group>"; };
+		BA765658233DBC7A00C0ADD1 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BACCF556233C8571000E83C8 /* SingaporeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingaporeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACCF559233C8571000E83C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACCF55E233C8571000E83C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +162,7 @@
 			children = (
 				BA76563B233DAA1300C0ADD1 /* ARAdmin.storyboard */,
 				BA765642233DAA9000C0ADD1 /* ARAdminViewController.swift */,
+				BA765655233DBB6C00C0ADD1 /* ARAdminViewModel.swift */,
 			);
 			path = ARAdmin;
 			sourceTree = "<group>";
@@ -166,8 +181,34 @@
 			children = (
 				BA765647233DAAE200C0ADD1 /* MainTabBarController.swift */,
 				BACCF55D233C8571000E83C8 /* Main.storyboard */,
+				BA76564B233DB45800C0ADD1 /* APIKeys.swift */,
 			);
 			path = Global;
+			sourceTree = "<group>";
+		};
+		BA76564D233DB81E00C0ADD1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BA76564E233DB85300C0ADD1 /* FirestoreManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BA765650233DB9AA00C0ADD1 /* PickerFloatingPanel */ = {
+			isa = PBXGroup;
+			children = (
+				BA765651233DB9B900C0ADD1 /* PickerFloatingPanel.storyboard */,
+				BA765653233DBB4600C0ADD1 /* PickerFloatingPanelViewController.swift */,
+			);
+			path = PickerFloatingPanel;
+			sourceTree = "<group>";
+		};
+		BA765657233DBC6C00C0ADD1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA765658233DBC7A00C0ADD1 /* Event.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BACCF54D233C8571000E83C8 = {
@@ -195,13 +236,17 @@
 		BACCF558233C8571000E83C8 /* SingaporeProject */ = {
 			isa = PBXGroup;
 			children = (
+				BA76564D233DB81E00C0ADD1 /* Utils */,
 				BA765646233DAAD100C0ADD1 /* Global */,
 				BA76563D233DAA4100C0ADD1 /* ARGuest */,
 				BA76563A233DA9C200C0ADD1 /* ARAdmin */,
+				BA765650233DB9AA00C0ADD1 /* PickerFloatingPanel */,
+				BA765657233DBC6C00C0ADD1 /* Model */,
 				BACCF559233C8571000E83C8 /* AppDelegate.swift */,
 				BACCF560233C8572000E83C8 /* Assets.xcassets */,
 				BACCF562233C8572000E83C8 /* LaunchScreen.storyboard */,
 				BACCF565233C8572000E83C8 /* Info.plist */,
+				BA765649233DB26800C0ADD1 /* GoogleService-Info.plist */,
 				BA765640233DAA7300C0ADD1 /* R.generated.swift */,
 			);
 			path = SingaporeProject;
@@ -362,6 +407,8 @@
 				BA76563F233DAA5300C0ADD1 /* ARGuest.storyboard in Resources */,
 				BACCF561233C8572000E83C8 /* Assets.xcassets in Resources */,
 				BACCF55F233C8571000E83C8 /* Main.storyboard in Resources */,
+				BA765652233DB9B900C0ADD1 /* PickerFloatingPanel.storyboard in Resources */,
+				BA76564A233DB26800C0ADD1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,7 +582,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA76564C233DB45800C0ADD1 /* APIKeys.swift in Sources */,
+				BA76564F233DB85300C0ADD1 /* FirestoreManager.swift in Sources */,
 				BA765645233DAA9D00C0ADD1 /* ARGuestViewController.swift in Sources */,
+				BA765656233DBB6C00C0ADD1 /* ARAdminViewModel.swift in Sources */,
+				BA765659233DBC7A00C0ADD1 /* Event.swift in Sources */,
+				BA765654233DBB4600C0ADD1 /* PickerFloatingPanelViewController.swift in Sources */,
 				BA765648233DAAE200C0ADD1 /* MainTabBarController.swift in Sources */,
 				BA765643233DAA9000C0ADD1 /* ARAdminViewController.swift in Sources */,
 				BACCF55A233C8571000E83C8 /* AppDelegate.swift in Sources */,

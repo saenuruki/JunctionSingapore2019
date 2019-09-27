@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = firstViewController
         self.window?.makeKeyAndVisible()
         
-//        FirebaseApp.configure()
+        FirebaseApp.configure()
         
         return true
     }

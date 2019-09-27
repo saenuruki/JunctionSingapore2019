@@ -10,20 +10,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Admin View Controller-->
         <scene sceneID="xdT-Kp-Y5L">
             <objects>
-                <viewController id="dZc-mg-t1J" sceneMemberID="viewController">
+                <viewController id="dZc-mg-t1J" customClass="ARAdminViewController" customModule="SingaporeProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k02-J3-v1E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXA-HH-9m1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dZc-mg-t1J" id="fDV-Qf-ncS"/>
+                                </connections>
+                            </arscnView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EXA-HH-9m1" firstAttribute="leading" secondItem="1m8-X7-6fo" secondAttribute="leading" id="S00-Af-ZV3"/>
+                            <constraint firstItem="1m8-X7-6fo" firstAttribute="bottom" secondItem="EXA-HH-9m1" secondAttribute="bottom" id="cM2-za-7rF"/>
+                            <constraint firstItem="1m8-X7-6fo" firstAttribute="trailing" secondItem="EXA-HH-9m1" secondAttribute="trailing" id="hPU-3B-ON9"/>
+                            <constraint firstItem="EXA-HH-9m1" firstAttribute="top" secondItem="k02-J3-v1E" secondAttribute="top" id="wYp-ut-gYo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1m8-X7-6fo"/>
                     </view>
+                    <connections>
+                        <outlet property="sceneView" destination="EXA-HH-9m1" id="uMe-Oe-06Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iln-XI-UmI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100" y="153"/>
+            <point key="canvasLocation" x="100.00000000000001" y="152.67857142857142"/>
         </scene>
     </scenes>
 </document>

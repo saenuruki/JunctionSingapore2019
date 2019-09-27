@@ -9,8 +9,13 @@
 /* Begin PBXBuildFile section */
 		51FDCA9E2F67AC5002C2779B /* Pods_SingaporeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAA080908765DFA08612A0E /* Pods_SingaporeProject.framework */; };
 		7AB0371F557C9D0B17748F68 /* Pods_SingaporeProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5400508A0B0908271B4FAE3 /* Pods_SingaporeProjectTests.framework */; };
+		BA76563C233DAA1300C0ADD1 /* ARAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA76563B233DAA1300C0ADD1 /* ARAdmin.storyboard */; };
+		BA76563F233DAA5300C0ADD1 /* ARGuest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA76563E233DAA5300C0ADD1 /* ARGuest.storyboard */; };
+		BA765641233DAA7400C0ADD1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765640233DAA7300C0ADD1 /* R.generated.swift */; };
+		BA765643233DAA9000C0ADD1 /* ARAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765642233DAA9000C0ADD1 /* ARAdminViewController.swift */; };
+		BA765645233DAA9D00C0ADD1 /* ARGuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765644233DAA9D00C0ADD1 /* ARGuestViewController.swift */; };
+		BA765648233DAAE200C0ADD1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765647233DAAE200C0ADD1 /* MainTabBarController.swift */; };
 		BACCF55A233C8571000E83C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACCF559233C8571000E83C8 /* AppDelegate.swift */; };
-		BACCF55C233C8571000E83C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACCF55B233C8571000E83C8 /* ViewController.swift */; };
 		BACCF55F233C8571000E83C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACCF55D233C8571000E83C8 /* Main.storyboard */; };
 		BACCF561233C8572000E83C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACCF560233C8572000E83C8 /* Assets.xcassets */; };
 		BACCF564233C8572000E83C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACCF562233C8572000E83C8 /* LaunchScreen.storyboard */; };
@@ -54,9 +59,14 @@
 		6C8170E6C15368CF2BCD7354 /* Pods_SingaporeProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingaporeProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F469471E77E333F1CBEA385 /* Pods-SingaporeProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingaporeProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-SingaporeProjectUITests/Pods-SingaporeProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		761323094688A38CE5D64C76 /* Pods-SingaporeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingaporeProject.debug.xcconfig"; path = "Target Support Files/Pods-SingaporeProject/Pods-SingaporeProject.debug.xcconfig"; sourceTree = "<group>"; };
+		BA76563B233DAA1300C0ADD1 /* ARAdmin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARAdmin.storyboard; sourceTree = "<group>"; };
+		BA76563E233DAA5300C0ADD1 /* ARGuest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARGuest.storyboard; sourceTree = "<group>"; };
+		BA765640233DAA7300C0ADD1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		BA765642233DAA9000C0ADD1 /* ARAdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAdminViewController.swift; sourceTree = "<group>"; };
+		BA765644233DAA9D00C0ADD1 /* ARGuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARGuestViewController.swift; sourceTree = "<group>"; };
+		BA765647233DAAE200C0ADD1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		BACCF556233C8571000E83C8 /* SingaporeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingaporeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACCF559233C8571000E83C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BACCF55B233C8571000E83C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BACCF55E233C8571000E83C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BACCF560233C8572000E83C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BACCF563233C8572000E83C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -133,6 +143,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BA76563A233DA9C200C0ADD1 /* ARAdmin */ = {
+			isa = PBXGroup;
+			children = (
+				BA76563B233DAA1300C0ADD1 /* ARAdmin.storyboard */,
+				BA765642233DAA9000C0ADD1 /* ARAdminViewController.swift */,
+			);
+			path = ARAdmin;
+			sourceTree = "<group>";
+		};
+		BA76563D233DAA4100C0ADD1 /* ARGuest */ = {
+			isa = PBXGroup;
+			children = (
+				BA76563E233DAA5300C0ADD1 /* ARGuest.storyboard */,
+				BA765644233DAA9D00C0ADD1 /* ARGuestViewController.swift */,
+			);
+			path = ARGuest;
+			sourceTree = "<group>";
+		};
+		BA765646233DAAD100C0ADD1 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				BA765647233DAAE200C0ADD1 /* MainTabBarController.swift */,
+				BACCF55D233C8571000E83C8 /* Main.storyboard */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		BACCF54D233C8571000E83C8 = {
 			isa = PBXGroup;
 			children = (
@@ -158,12 +195,14 @@
 		BACCF558233C8571000E83C8 /* SingaporeProject */ = {
 			isa = PBXGroup;
 			children = (
+				BA765646233DAAD100C0ADD1 /* Global */,
+				BA76563D233DAA4100C0ADD1 /* ARGuest */,
+				BA76563A233DA9C200C0ADD1 /* ARAdmin */,
 				BACCF559233C8571000E83C8 /* AppDelegate.swift */,
-				BACCF55B233C8571000E83C8 /* ViewController.swift */,
-				BACCF55D233C8571000E83C8 /* Main.storyboard */,
 				BACCF560233C8572000E83C8 /* Assets.xcassets */,
 				BACCF562233C8572000E83C8 /* LaunchScreen.storyboard */,
 				BACCF565233C8572000E83C8 /* Info.plist */,
+				BA765640233DAA7300C0ADD1 /* R.generated.swift */,
 			);
 			path = SingaporeProject;
 			sourceTree = "<group>";
@@ -319,6 +358,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BACCF564233C8572000E83C8 /* LaunchScreen.storyboard in Resources */,
+				BA76563C233DAA1300C0ADD1 /* ARAdmin.storyboard in Resources */,
+				BA76563F233DAA5300C0ADD1 /* ARGuest.storyboard in Resources */,
 				BACCF561233C8572000E83C8 /* Assets.xcassets in Resources */,
 				BACCF55F233C8571000E83C8 /* Main.storyboard in Resources */,
 			);
@@ -437,7 +478,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/$PROJECT_NAME/R.generated.swift",
+				$SRCROOT/$PROJECT_NAME/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -494,8 +535,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BACCF55C233C8571000E83C8 /* ViewController.swift in Sources */,
+				BA765645233DAA9D00C0ADD1 /* ARGuestViewController.swift in Sources */,
+				BA765648233DAAE200C0ADD1 /* MainTabBarController.swift in Sources */,
+				BA765643233DAA9000C0ADD1 /* ARAdminViewController.swift in Sources */,
 				BACCF55A233C8571000E83C8 /* AppDelegate.swift in Sources */,
+				BA765641233DAA7400C0ADD1 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,7 +727,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = saenuruki.SingaporeProject;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.junctionx.SingaporeProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -707,7 +751,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = saenuruki.SingaporeProject;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.junctionx.SingaporeProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

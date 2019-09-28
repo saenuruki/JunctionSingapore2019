@@ -10,12 +10,17 @@ import UIKit
 import ARKit
 
 class GamePlayerViewController: UIViewController {
+    
     @IBOutlet var sceneView: ARSCNView!
-    @IBOutlet weak var hitLabel: UILabel! {
-        didSet {
-            hitLabel.isHidden = true
-        }
-    }
+    @IBOutlet weak var hitLabel: UILabel!
+//        {
+//        didSet {
+//            hitLabel.isHidden = true
+//        }
+//    }
+    
+    var second: Double = 60.0
+    var timer = Timer()
     
     let defaultConfiguration: ARWorldTrackingConfiguration = {
         let configuration = ARWorldTrackingConfiguration()
@@ -48,6 +53,8 @@ class GamePlayerViewController: UIViewController {
         sceneView.scene.physicsWorld.contactDelegate = self
         
         sceneView.scene.rootNode.addChildNode(boxNode)
+        
+        runTimer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -104,17 +111,26 @@ extension GamePlayerViewController: SCNPhysicsContactDelegate {
             || (nodeB.name == "box" && nodeA.name == "ball") {
             
             DispatchQueue.main.async {
-                self.hitLabel.text = "HIT!!"
-                self.hitLabel.sizeToFit()
-                self.hitLabel.isHidden = false
-                
-                // Vibration
+//                self.hitLabel.text = "HIT!!"
+//                self.hitLabel.sizeToFit()
+//                self.hitLabel.isHidden = false
+//
+//                // Vibration
                 AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                    self.hitLabel.isHidden = true
-                }
+//
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//                    self.hitLabel.isHidden = true
+//                }
             }
         }
+    }
+    
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: (#selector(GamePlayerViewController.updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer() {
+        second -= 0.1
+        hitLabel.text = String(describing: round(second*10)/10)
     }
 }

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class GameFinishViewController: UIViewController {
     
@@ -17,8 +19,19 @@ class GameFinishViewController: UIViewController {
     @IBOutlet weak var discountLabel: UILabel!
     @IBOutlet weak var purchaseButton: UIButton!
     
+    fileprivate private(set) weak var viewModel: GameViewModel!
+    fileprivate let bag = DisposeBag()
+    
+    static func create(viewModel: GameViewModel) -> UIViewController {
+        let vc = R.storyboard.gameFinish.instantiateInitialViewController()!
+        vc.viewModel = viewModel
+        return vc
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureUI()
+        configureButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,8 +46,37 @@ class GameFinishViewController: UIViewController {
 extension GameFinishViewController {
     
     private func configureUI() {
+        switch viewModel.gameType.value {
+        case .easy:
+            priceLabel.text = "$ 1.00"
+        case .middle:
+            priceLabel.text = "$ 5.00"
+        case .hard:
+            priceLabel.text = "$ 10.00"
+        }
+        
+        switch viewModel.itemType.value {
+        case .macbook:
+            itemImageView.image =  R.image.img_macbook()
+            itemLabel.text = "MacBook Air 12"
+        case .mixer:
+            itemImageView.image =  R.image.img_mixer()
+            itemLabel.text = "Sencor Food Mixer"
+        case .watch:
+            itemImageView.image =  R.image.img_watch()
+            itemLabel.text = "CASIO G-SHOCK"
+        }
     }
     
     private func configureButton() {
+        
+        purchaseButton
+            .rx.tap
+            .throttle(0.7, latest: false, scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                guard let wself = self else { return }
+                print("tapしたよ")
+            })
+            .disposed(by: bag)
     }
 }

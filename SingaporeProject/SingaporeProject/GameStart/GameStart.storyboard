@@ -36,27 +36,28 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihS-dC-MYA">
                                 <rect key="frame" x="151" y="436" width="112" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K10-i3-h0B">
-                                        <rect key="frame" x="35" y="112" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 5.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K10-i3-h0B">
+                                        <rect key="frame" x="29.5" y="112" width="53.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="RUB-pM-RNP"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gr5-qb-9jn">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_macbook" translatesAutoresizingMaskIntoConstraints="NO" id="Gr5-qb-9jn">
                                         <rect key="frame" x="16" y="16" width="80" height="80"/>
+                                        <color key="backgroundColor" red="0.91743987690953732" green="0.92246061563491821" blue="0.60204945276702237" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Gr5-qb-9jn" secondAttribute="height" multiplier="1:1" id="jrR-Oj-jbS"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrV-s5-K1Y">
-                                        <rect key="frame" x="35" y="157" width="42" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NORMAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrV-s5-K1Y">
+                                        <rect key="frame" x="7.5" y="157" width="97.5" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="NgJ-AC-c2m"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -85,27 +86,28 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bV2-uV-3Pw">
                                 <rect key="frame" x="23" y="436" width="112" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhj-gg-QNF">
-                                        <rect key="frame" x="35" y="112" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhj-gg-QNF">
+                                        <rect key="frame" x="29.5" y="112" width="53.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="HuK-da-Q2G"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eoy-2k-ztW">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_macbook" translatesAutoresizingMaskIntoConstraints="NO" id="Eoy-2k-ztW">
                                         <rect key="frame" x="16" y="16" width="80" height="80"/>
+                                        <color key="backgroundColor" red="0.66167430738272681" green="0.92246061563491821" blue="0.85851206700863147" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Eoy-2k-ztW" secondAttribute="height" multiplier="1:1" id="aSo-ny-wmm"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdh-Pt-mzs">
-                                        <rect key="frame" x="35" y="157" width="42" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EASY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdh-Pt-mzs">
+                                        <rect key="frame" x="28" y="157" width="56" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="hBY-ij-Gca"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -134,27 +136,28 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkT-xL-75p">
                                 <rect key="frame" x="279" y="436" width="112" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45Y-Hg-azi">
-                                        <rect key="frame" x="35" y="112" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 10.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45Y-Hg-azi">
+                                        <rect key="frame" x="24" y="112" width="64" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="k6m-K5-s2t"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="555-gC-8Y4">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_macbook" translatesAutoresizingMaskIntoConstraints="NO" id="555-gC-8Y4">
                                         <rect key="frame" x="16" y="16" width="80" height="80"/>
+                                        <color key="backgroundColor" red="0.92246061563491821" green="0.50812092504993334" blue="0.47260585286654055" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="555-gC-8Y4" secondAttribute="height" multiplier="1:1" id="vqS-zf-9PO"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVf-AF-djF">
-                                        <rect key="frame" x="35" y="157" width="42" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HARD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVf-AF-djF">
+                                        <rect key="frame" x="24.5" y="157" width="63" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="aeX-dZ-qb7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -255,9 +258,13 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="3PM-Uc-bN1" id="TGb-y3-pKC"/>
-                        <outlet property="easyImageView" destination="Gr5-qb-9jn" id="1Ov-DL-EyK"/>
-                        <outlet property="easyView" destination="ihS-dC-MYA" id="vza-Fq-x6k"/>
+                        <outlet property="easyButton" destination="5jO-pI-6b2" id="AiM-kX-raJ"/>
+                        <outlet property="easyView" destination="bV2-uV-3Pw" id="Q6S-0s-13M"/>
+                        <outlet property="hardButton" destination="Phi-V6-09j" id="oAK-Tu-cHd"/>
+                        <outlet property="hardView" destination="WkT-xL-75p" id="9Pi-SG-AyE"/>
                         <outlet property="itemImageView" destination="kI3-LU-eSE" id="5qs-Tt-4vu"/>
+                        <outlet property="middleButton" destination="fos-9W-WdS" id="y9O-Qf-RcX"/>
+                        <outlet property="middleView" destination="ihS-dC-MYA" id="Rop-5b-IVu"/>
                         <outlet property="titleLabel" destination="Zki-bg-MzL" id="2jZ-Hp-fcz"/>
                     </connections>
                 </viewController>
@@ -268,5 +275,6 @@
     </scenes>
     <resources>
         <image name="icon_back_nav" width="24" height="24"/>
+        <image name="img_macbook" width="2000" height="1536"/>
     </resources>
 </document>

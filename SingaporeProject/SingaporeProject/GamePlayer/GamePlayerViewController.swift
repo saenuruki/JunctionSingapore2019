@@ -18,6 +18,8 @@ class GamePlayerViewController: UIViewController {
 //            hitLabel.isHidden = true
 //        }
 //    }
+    fileprivate private(set) weak var viewModel: GameViewModel!
+
     
     var second: Double = 60.0
     var timer = Timer()
@@ -44,6 +46,12 @@ class GamePlayerViewController: UIViewController {
         
         return node
     }()
+    
+    static func create(viewModel: GameViewModel) -> UIViewController {
+        let vc = R.storyboard.gamePlayer.instantiateInitialViewController()!
+        vc.viewModel = viewModel
+        return vc
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -51,17 +51,6 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdU-l3-200">
-                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
-                                <color key="backgroundColor" red="1" green="0.30338274729999998" blue="0.18588337360000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="uGc-jY-wfT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="44"/>
-                                <state key="normal" title="Purchase">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vaucher!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCh-gl-ND7">
                                 <rect key="frame" x="137.5" y="614" width="139" height="40"/>
                                 <constraints>
@@ -71,10 +60,53 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiX-AZ-xtz" customClass="GradientView" customModule="SingaporeProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdU-l3-200">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="uGc-jY-wfT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="44"/>
+                                        <state key="normal" title="Purchase">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bdU-l3-200" secondAttribute="trailing" id="340-b0-llh"/>
+                                    <constraint firstAttribute="height" constant="80" id="Bbf-FY-2bu"/>
+                                    <constraint firstItem="bdU-l3-200" firstAttribute="top" secondItem="ZiX-AZ-xtz" secondAttribute="top" id="CNo-GM-GaT"/>
+                                    <constraint firstItem="bdU-l3-200" firstAttribute="leading" secondItem="ZiX-AZ-xtz" secondAttribute="leading" id="UeK-gR-ydQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="bdU-l3-200" secondAttribute="bottom" id="rol-6H-Z9i"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                        <color key="value" red="0.80784313730000001" green="0.031372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                        <color key="value" red="0.95686274510000002" green="0.55294117649999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startPointX">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startPointY">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endPointX">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endPointY">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xeU-IU-vZd" firstAttribute="trailing" secondItem="bdU-l3-200" secondAttribute="trailing" id="86X-OE-U0I"/>
                             <constraint firstItem="mm5-H7-iyd" firstAttribute="top" secondItem="DYV-fk-tXm" secondAttribute="bottom" constant="32" id="GkD-85-W0d"/>
                             <constraint firstItem="sxz-eY-zM9" firstAttribute="top" secondItem="mm5-H7-iyd" secondAttribute="bottom" constant="32" id="HyW-c3-yTE"/>
                             <constraint firstItem="hQ5-Ud-tcB" firstAttribute="top" secondItem="xeU-IU-vZd" secondAttribute="top" constant="24" id="LKg-6K-WBx"/>
@@ -83,11 +115,12 @@
                             <constraint firstItem="xeU-IU-vZd" firstAttribute="trailing" secondItem="hQ5-Ud-tcB" secondAttribute="trailing" constant="20" id="Rd4-hR-Zok"/>
                             <constraint firstItem="DYV-fk-tXm" firstAttribute="centerX" secondItem="ZYL-LL-MsZ" secondAttribute="centerX" id="RvO-xo-NsX"/>
                             <constraint firstItem="DCh-gl-ND7" firstAttribute="centerX" secondItem="ZYL-LL-MsZ" secondAttribute="centerX" id="Yru-fD-prx"/>
-                            <constraint firstItem="bdU-l3-200" firstAttribute="leading" secondItem="xeU-IU-vZd" secondAttribute="leading" id="f22-Im-RkG"/>
+                            <constraint firstItem="ZiX-AZ-xtz" firstAttribute="leading" secondItem="xeU-IU-vZd" secondAttribute="leading" id="cuc-6m-SRP"/>
                             <constraint firstItem="DCh-gl-ND7" firstAttribute="top" secondItem="sxz-eY-zM9" secondAttribute="bottom" constant="18" id="hTk-Y2-jAQ"/>
                             <constraint firstItem="sxz-eY-zM9" firstAttribute="centerX" secondItem="ZYL-LL-MsZ" secondAttribute="centerX" id="jSl-1A-RuQ"/>
                             <constraint firstItem="mm5-H7-iyd" firstAttribute="centerX" secondItem="ZYL-LL-MsZ" secondAttribute="centerX" id="ksz-og-XRJ"/>
-                            <constraint firstItem="bdU-l3-200" firstAttribute="bottom" secondItem="xeU-IU-vZd" secondAttribute="bottom" id="obM-7l-i8I"/>
+                            <constraint firstItem="xeU-IU-vZd" firstAttribute="trailing" secondItem="ZiX-AZ-xtz" secondAttribute="trailing" id="sZH-M9-aNC"/>
+                            <constraint firstItem="ZiX-AZ-xtz" firstAttribute="bottom" secondItem="xeU-IU-vZd" secondAttribute="bottom" id="y9a-1F-8gS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xeU-IU-vZd"/>
                     </view>

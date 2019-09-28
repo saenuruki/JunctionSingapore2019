@@ -15,13 +15,12 @@
 		BA0A65F9233F576B00B7D4B1 /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A65F8233F576B00B7D4B1 /* ItemDetail.storyboard */; };
 		BA0A65FB233F578E00B7D4B1 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A65FA233F578E00B7D4B1 /* ItemDetailViewController.swift */; };
 		BA0A65FD233F581E00B7D4B1 /* GameStart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A65FC233F581E00B7D4B1 /* GameStart.storyboard */; };
-		BA0A6601233F583E00B7D4B1 /* GameStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6600233F583E00B7D4B1 /* GameStartViewModel.swift */; };
+		BA0A6601233F583E00B7D4B1 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6600233F583E00B7D4B1 /* GameViewModel.swift */; };
 		BA0A6603233F596200B7D4B1 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A6602233F596200B7D4B1 /* Camera.storyboard */; };
 		BA0A6605233F597F00B7D4B1 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6604233F597F00B7D4B1 /* CameraViewController.swift */; };
 		BA0A6607233F598900B7D4B1 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6606233F598900B7D4B1 /* CameraViewModel.swift */; };
 		BA0A6609233F599A00B7D4B1 /* GamePlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A6608233F599A00B7D4B1 /* GamePlayer.storyboard */; };
 		BA0A660B233F59C100B7D4B1 /* GamePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A660A233F59C100B7D4B1 /* GamePlayerViewController.swift */; };
-		BA0A660D233F5A0B00B7D4B1 /* GamePlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A660C233F5A0B00B7D4B1 /* GamePlayerViewModel.swift */; };
 		BA0A660F233F5A1B00B7D4B1 /* GameFinish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A660E233F5A1B00B7D4B1 /* GameFinish.storyboard */; };
 		BA0A6611233F5A4400B7D4B1 /* GameFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6610233F5A4400B7D4B1 /* GameFinishViewController.swift */; };
 		BA0A6614233FAF3600B7D4B1 /* CameraConfirm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A6613233FAF3600B7D4B1 /* CameraConfirm.storyboard */; };
@@ -95,13 +94,12 @@
 		BA0A65F8233F576B00B7D4B1 /* ItemDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetail.storyboard; sourceTree = "<group>"; };
 		BA0A65FA233F578E00B7D4B1 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		BA0A65FC233F581E00B7D4B1 /* GameStart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameStart.storyboard; sourceTree = "<group>"; };
-		BA0A6600233F583E00B7D4B1 /* GameStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewModel.swift; sourceTree = "<group>"; };
+		BA0A6600233F583E00B7D4B1 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		BA0A6602233F596200B7D4B1 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		BA0A6604233F597F00B7D4B1 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		BA0A6606233F598900B7D4B1 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		BA0A6608233F599A00B7D4B1 /* GamePlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GamePlayer.storyboard; sourceTree = "<group>"; };
 		BA0A660A233F59C100B7D4B1 /* GamePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayerViewController.swift; sourceTree = "<group>"; };
-		BA0A660C233F5A0B00B7D4B1 /* GamePlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayerViewModel.swift; sourceTree = "<group>"; };
 		BA0A660E233F5A1B00B7D4B1 /* GameFinish.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameFinish.storyboard; sourceTree = "<group>"; };
 		BA0A6610233F5A4400B7D4B1 /* GameFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinishViewController.swift; sourceTree = "<group>"; };
 		BA0A6613233FAF3600B7D4B1 /* CameraConfirm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraConfirm.storyboard; sourceTree = "<group>"; };
@@ -236,7 +234,7 @@
 			children = (
 				A0DB9061233F7490007874B3 /* GameStartViewController.swift */,
 				BA0A65FC233F581E00B7D4B1 /* GameStart.storyboard */,
-				BA0A6600233F583E00B7D4B1 /* GameStartViewModel.swift */,
+				BA0A6600233F583E00B7D4B1 /* GameViewModel.swift */,
 			);
 			path = GameStart;
 			sourceTree = "<group>";
@@ -246,7 +244,6 @@
 			children = (
 				BA0A6608233F599A00B7D4B1 /* GamePlayer.storyboard */,
 				BA0A660A233F59C100B7D4B1 /* GamePlayerViewController.swift */,
-				BA0A660C233F5A0B00B7D4B1 /* GamePlayerViewModel.swift */,
 			);
 			path = GamePlayer;
 			sourceTree = "<group>";
@@ -724,7 +721,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA76564C233DB45800C0ADD1 /* APIKeys.swift in Sources */,
-				BA0A660D233F5A0B00B7D4B1 /* GamePlayerViewModel.swift in Sources */,
 				BA76564F233DB85300C0ADD1 /* FirestoreManager.swift in Sources */,
 				BA765645233DAA9D00C0ADD1 /* ARGuestViewController.swift in Sources */,
 				A0DB9063233F750E007874B3 /* GameStartViewController.swift in Sources */,
@@ -743,7 +739,7 @@
 				BA0A6607233F598900B7D4B1 /* CameraViewModel.swift in Sources */,
 				BA765643233DAA9000C0ADD1 /* ARAdminViewController.swift in Sources */,
 				BACCF55A233C8571000E83C8 /* AppDelegate.swift in Sources */,
-				BA0A6601233F583E00B7D4B1 /* GameStartViewModel.swift in Sources */,
+				BA0A6601233F583E00B7D4B1 /* GameViewModel.swift in Sources */,
 				BA0A6605233F597F00B7D4B1 /* CameraViewController.swift in Sources */,
 				BA76565B233DC3F200C0ADD1 /* ARGuestViewModel.swift in Sources */,
 				BA765641233DAA7400C0ADD1 /* R.generated.swift in Sources */,

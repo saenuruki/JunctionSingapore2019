@@ -16,13 +16,35 @@
                     <view key="view" contentMode="scaleToFill" id="ck6-Es-18P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-ItemDetail" translatesAutoresizingMaskIntoConstraints="NO" id="tM3-q6-dAB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZM7-gX-XBa">
+                                <rect key="frame" x="210" y="805" width="204" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tM3-q6-dAB" firstAttribute="top" secondItem="ck6-Es-18P" secondAttribute="top" id="Vul-HD-Ybp"/>
+                            <constraint firstAttribute="bottom" secondItem="tM3-q6-dAB" secondAttribute="bottom" id="pSU-QA-STw"/>
+                            <constraint firstItem="tM3-q6-dAB" firstAttribute="trailing" secondItem="Byz-OK-CJZ" secondAttribute="trailing" id="pnb-Rf-4bH"/>
+                            <constraint firstItem="tM3-q6-dAB" firstAttribute="leading" secondItem="Byz-OK-CJZ" secondAttribute="leading" id="zR6-HI-KcF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Byz-OK-CJZ"/>
                     </view>
+                    <connections>
+                        <outlet property="itemImageView" destination="tM3-q6-dAB" id="nz1-eu-vkx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9V-FT-fYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="172" y="66"/>
+            <point key="canvasLocation" x="169.56521739130437" y="65.625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image-ItemDetail" width="295.5" height="640"/>
+    </resources>
 </document>

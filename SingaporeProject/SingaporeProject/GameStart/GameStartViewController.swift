@@ -10,6 +10,11 @@ import UIKit
 
 class GameStartViewController: UIViewController {
     
+    @IBOutlet weak var itemImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var easyView: UIView!
+    @IBOutlet weak var easyImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

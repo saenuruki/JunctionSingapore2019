@@ -24,6 +24,7 @@
 		BA0A660D233F5A0B00B7D4B1 /* GamePlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A660C233F5A0B00B7D4B1 /* GamePlayerViewModel.swift */; };
 		BA0A660F233F5A1B00B7D4B1 /* GameFinish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A660E233F5A1B00B7D4B1 /* GameFinish.storyboard */; };
 		BA0A6611233F5A4400B7D4B1 /* GameFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6610233F5A4400B7D4B1 /* GameFinishViewController.swift */; };
+		BA0A6614233FAF3600B7D4B1 /* CameraConfirm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A6613233FAF3600B7D4B1 /* CameraConfirm.storyboard */; };
 		BA76563C233DAA1300C0ADD1 /* ARAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA76563B233DAA1300C0ADD1 /* ARAdmin.storyboard */; };
 		BA76563F233DAA5300C0ADD1 /* ARGuest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA76563E233DAA5300C0ADD1 /* ARGuest.storyboard */; };
 		BA765641233DAA7400C0ADD1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765640233DAA7300C0ADD1 /* R.generated.swift */; };
@@ -101,6 +102,7 @@
 		BA0A660C233F5A0B00B7D4B1 /* GamePlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayerViewModel.swift; sourceTree = "<group>"; };
 		BA0A660E233F5A1B00B7D4B1 /* GameFinish.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameFinish.storyboard; sourceTree = "<group>"; };
 		BA0A6610233F5A4400B7D4B1 /* GameFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinishViewController.swift; sourceTree = "<group>"; };
+		BA0A6613233FAF3600B7D4B1 /* CameraConfirm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraConfirm.storyboard; sourceTree = "<group>"; };
 		BA76563B233DAA1300C0ADD1 /* ARAdmin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARAdmin.storyboard; sourceTree = "<group>"; };
 		BA76563E233DAA5300C0ADD1 /* ARGuest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARGuest.storyboard; sourceTree = "<group>"; };
 		BA765640233DAA7300C0ADD1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -254,6 +256,14 @@
 			path = GameFinish;
 			sourceTree = "<group>";
 		};
+		BA0A6612233FAF2800B7D4B1 /* CameraConfirm */ = {
+			isa = PBXGroup;
+			children = (
+				BA0A6613233FAF3600B7D4B1 /* CameraConfirm.storyboard */,
+			);
+			path = CameraConfirm;
+			sourceTree = "<group>";
+		};
 		BA76563A233DA9C200C0ADD1 /* ARAdmin */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +355,7 @@
 		BACCF558233C8571000E83C8 /* SingaporeProject */ = {
 			isa = PBXGroup;
 			children = (
+				BA0A6612233FAF2800B7D4B1 /* CameraConfirm */,
 				BA0A65F3233F571700B7D4B1 /* GameFinish */,
 				BA0A65F2233F570D00B7D4B1 /* GamePlayer */,
 				BA0A65F1233F570000B7D4B1 /* GameStart */,
@@ -522,6 +533,7 @@
 				BA0A65F9233F576B00B7D4B1 /* ItemDetail.storyboard in Resources */,
 				BA0A6603233F596200B7D4B1 /* Camera.storyboard in Resources */,
 				BACCF564233C8572000E83C8 /* LaunchScreen.storyboard in Resources */,
+				BA0A6614233FAF3600B7D4B1 /* CameraConfirm.storyboard in Resources */,
 				BA765662233DC4F500C0ADD1 /* ObtainBenefit.storyboard in Resources */,
 				BA0A660F233F5A1B00B7D4B1 /* GameFinish.storyboard in Resources */,
 				BA76563C233DAA1300C0ADD1 /* ARAdmin.storyboard in Resources */,

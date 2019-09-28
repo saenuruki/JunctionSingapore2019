@@ -29,6 +29,7 @@ class GameStartViewController: UIViewController {
     @IBOutlet weak var hardView: UIView!
     @IBOutlet weak var hardButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
     
     fileprivate(set) var viewModel = GameViewModel()
     fileprivate let bag = DisposeBag()
@@ -119,6 +120,18 @@ extension GameStartViewController {
                 wself.navigationController?.popViewController(animated: true)
             })
             .disposed(by: bag)
+        
+        startButton
+            .rx.tap
+            .throttle(0.7, latest: false, scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                guard let wself = self else { return }
+                let vc = GamePlayerViewController.create(viewModel: wself.viewModel)
+                vc.modalPresentationStyle = .custom
+                vc.transitioningDelegate = self
+                wself.present(vc, animated: true, completion: nil)
+            })
+            .disposed(by: bag)
     }
     
     func configureVM() {
@@ -142,5 +155,28 @@ extension GameStartViewController {
                 }
             })
             .disposed(by: bag)
+        
+        viewModel
+            .dismissFlag$
+            .subscribe(onNext: { [weak self] isDismissed in
+                guard let wself = self else { return }
+                //                wself.dismiss(animated: true, completion: {
+                //                    wself.inferDelegate.modalDidFinished(modalText: "hogehogehgoegheo")
+                //                })
+                // falseに戻す
+                if isDismissed {
+                    let vc = GameFinishViewController.create(viewModel: wself.viewModel)
+                    wself.navigationController?.pushViewController(vc, animated: true)
+                    wself.viewModel.dismissFlagTrigger.onNext(false)
+                }
+            })
+            .disposed(by: bag)
+    }
+}
+
+extension GameStartViewController: UIViewControllerTransitioningDelegate {
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return CustomPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }

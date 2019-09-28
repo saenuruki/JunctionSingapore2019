@@ -21,7 +21,7 @@ class GamePlayerViewController: UIViewController {
     fileprivate private(set) weak var viewModel: GameViewModel!
 
     
-    var second: Double = 60.0
+    var second: Double = 30.0
     var timer = Timer()
     
     let defaultConfiguration: ARWorldTrackingConfiguration = {
@@ -129,6 +129,7 @@ extension GamePlayerViewController: SCNPhysicsContactDelegate {
 //                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
 //                    self.hitLabel.isHidden = true
 //                }
+                self.viewModel.addGameScore()
             }
         }
     }
@@ -140,5 +141,11 @@ extension GamePlayerViewController: SCNPhysicsContactDelegate {
     @objc func updateTimer() {
         second -= 0.1
         hitLabel.text = String(describing: round(second*10)/10)
+        if second < 0 {
+            self.dismiss(animated: false, completion: {
+                // 親のViewControllerも閉じるためのフラグを立てる
+                self.viewModel.dismissFlagTrigger.onNext(true)
+            })
+        }
     }
 }

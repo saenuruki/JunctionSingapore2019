@@ -17,13 +17,17 @@ class GameViewModel {
     
     let gameType$: Observable<GameType>
     let itemType$: Observable<ItemType>
+    let gameScore$: Observable<Int>
+    let dismissFlag$: Observable<Bool>
     
     let gameType = Variable<GameType>(.easy)
     let itemType = Variable<ItemType>(.macbook)
+    let gameScore = Variable<Int>(0)
     
     let gameTypeTrigger = PublishSubject<GameType>()
     let itemTypeTrigger = PublishSubject<ItemType>()
-
+    let gameScoreTrigger = PublishSubject<Int>()
+    let dismissFlagTrigger = PublishSubject<Bool>()
     
     init() {
         
@@ -42,9 +46,50 @@ class GameViewModel {
             )
             .concat()
             .share(replay: 1)
+        
+        gameScore$ = Observable
+            .of(
+                Observable.just(0),
+                gameScoreTrigger.asObservable()
+            )
+            .concat()
+            .share(replay: 1)
+        
+        dismissFlag$ = Observable
+            .of(
+                Observable.just(false),
+                dismissFlagTrigger.asObservable()
+            )
+            .concat()
+            .share(replay: 1)
+        
+        gameType$
+            .subscribe(onNext: { [weak self] type in
+                guard let wself = self else { return }
+                wself.gameType.value = type
+            })
+            .disposed(by: bag)
+        
+        itemType$
+            .subscribe(onNext: { [weak self] type in
+                guard let wself = self else { return }
+                wself.itemType.value = type
+            })
+            .disposed(by: bag)
+        
+        gameScore$
+            .subscribe(onNext: { [weak self] score in
+                guard let wself = self else { return }
+                wself.gameScore.value = score
+            })
+            .disposed(by: bag)
     }
 }
 
 extension GameViewModel {
     
+    func addGameScore() {
+        let newScore = gameScore.value + 30
+        gameScoreTrigger.onNext(newScore)
+    }
 }

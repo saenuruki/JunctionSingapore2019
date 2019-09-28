@@ -45,7 +45,7 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_macbook" translatesAutoresizingMaskIntoConstraints="NO" id="Gr5-qb-9jn">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_normal" translatesAutoresizingMaskIntoConstraints="NO" id="Gr5-qb-9jn">
                                         <rect key="frame" x="16" y="16" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.91743987690953732" green="0.92246061563491821" blue="0.60204945276702237" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -95,7 +95,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_macbook" translatesAutoresizingMaskIntoConstraints="NO" id="Eoy-2k-ztW">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_easy" translatesAutoresizingMaskIntoConstraints="NO" id="Eoy-2k-ztW">
                                         <rect key="frame" x="16" y="16" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.66167430738272681" green="0.92246061563491821" blue="0.85851206700863147" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -145,7 +145,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_macbook" translatesAutoresizingMaskIntoConstraints="NO" id="555-gC-8Y4">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_hard" translatesAutoresizingMaskIntoConstraints="NO" id="555-gC-8Y4">
                                         <rect key="frame" x="16" y="16" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.92246061563491821" green="0.50812092504993334" blue="0.47260585286654055" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -265,6 +265,7 @@
                         <outlet property="itemImageView" destination="kI3-LU-eSE" id="5qs-Tt-4vu"/>
                         <outlet property="middleButton" destination="fos-9W-WdS" id="y9O-Qf-RcX"/>
                         <outlet property="middleView" destination="ihS-dC-MYA" id="Rop-5b-IVu"/>
+                        <outlet property="startButton" destination="MMl-A6-orP" id="Y7E-tg-FBV"/>
                         <outlet property="titleLabel" destination="Zki-bg-MzL" id="2jZ-Hp-fcz"/>
                     </connections>
                 </viewController>
@@ -275,6 +276,8 @@
     </scenes>
     <resources>
         <image name="icon_back_nav" width="24" height="24"/>
-        <image name="img_macbook" width="2000" height="1536"/>
+        <image name="img_easy" width="50" height="50"/>
+        <image name="img_hard" width="50" height="50"/>
+        <image name="img_normal" width="50" height="50"/>
     </resources>
 </document>

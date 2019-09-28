@@ -171,6 +171,18 @@ extension GameStartViewController {
                 }
             })
             .disposed(by: bag)
+        
+        viewModel
+            .popFlag$
+            .subscribe(onNext: { [weak self] isPoped in
+                guard let wself = self else { return }
+                // falseに戻す
+                if isPoped {
+                    wself.navigationController?.popViewController(animated: true)
+                    wself.viewModel.popFlagTrigger.onNext(false)
+                }
+            })
+            .disposed(by: bag)
     }
 }
 

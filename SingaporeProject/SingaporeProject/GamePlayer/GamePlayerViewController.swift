@@ -32,19 +32,66 @@ class GamePlayerViewController: UIViewController {
     }()
     
     lazy var boxNode: SCNNode = {
-        let cylinder = SCNCylinder(radius: 0.1, height: 0.05)
-        let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.01)
-        box.firstMaterial?.diffuse.contents = UIColor.red
-        let node = SCNNode(geometry: box)
-        node.name = "box"
-        node.position = SCNVector3Make(0, 0, -1.5)
+//        let cylinder = SCNCylinder(radius: 0.1, height: 0.05)
+//        let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.01)
+//        box.firstMaterial?.diffuse.contents = UIColor.red
+//        let node = SCNNode(geometry: box)
+//        node.name = "box"
+//        node.position = SCNVector3Make(0, 0, -1.5)
+//
+//        // add PhysicsShape
+//        let shape = SCNPhysicsShape(geometry: box, options: nil)
+//        node.physicsBody = SCNPhysicsBody(type: .dynamic, shape: shape)
+//        node.physicsBody?.isAffectedByGravity = false
+//
+//        return node
+//        let scene = SCNScene(named: "art.scnassets/pictureTable.scn")!
+//        let node = scene.rootNode.childNode(withName: "tableNode", recursively: false)!
+//        let box = SCNBox(width: 0.3, height: 0.3, length: 0.1, chamferRadius: 0.01)
+//        let node = SCNNode(geometry: box)
+//        node.name = "box"
+////        node.position = SCNVector3Make(0, 0, -1.5)
+//
+//        // 写真のnode
+//        let picture = SCNBox(width: 0.3, height: 0.3, length: 0.01, chamferRadius: 0)
+////        picture.firstMaterial?.diffuse.contents = self.viewModel.getImage(by: self.viewModel.itemType.value)
+//        picture.firstMaterial?.diffuse.contents = R.image.img_macbook()
+//        let pictureNode = SCNNode(geometry: picture)
+//
+//        // frameに貼る
+//        let frameNode = node.childNode(withName: "frame", recursively: true)
+//        frameNode?.addChildNode(pictureNode)
+//
+//        node.scale = SCNVector3(x: 0.3, y: 0.3, z: 0.3)
+//        return node
         
-        // add PhysicsShape
-        let shape = SCNPhysicsShape(geometry: box, options: nil)
-        node.physicsBody = SCNPhysicsBody(type: .dynamic, shape: shape)
-        node.physicsBody?.isAffectedByGravity = false
+        let cube = SCNBox(width: 0.3, height: 0.3, length: 0.01, chamferRadius: 0)
+        let cubeNode = SCNNode(geometry: cube)
+        cubeNode.name = "box"
         
-        return node
+        // 6面、別々のテクスチャを貼る
+        let m1 = SCNMaterial()
+//        let m2 = SCNMaterial()
+//        let m3 = SCNMaterial()
+//        let m4 = SCNMaterial()
+//        let m5 = SCNMaterial()
+//        let m6 = SCNMaterial()
+        
+        m1.diffuse.contents = R.image.img_macbook()
+//        m2.diffuse.contents = R.image.img_macbook()
+//        m3.diffuse.contents = R.image.img_macbook()
+//        m4.diffuse.contents = R.image.img_macbook()
+//        m5.diffuse.contents = R.image.img_macbook()
+//        m6.diffuse.contents = R.image.img_macbook()
+//
+//        cube.materials = [m1, m2, m3, m4, m5, m6]
+        cube.firstMaterial = m1
+        
+        // 初期位置の指定: 50cm画面奥、10cm上方に配置
+        cubeNode.position = SCNVector3Make(0, 0, -1.5)
+        
+        return cubeNode
+        
     }()
     
     static func create(viewModel: GameViewModel) -> UIViewController {

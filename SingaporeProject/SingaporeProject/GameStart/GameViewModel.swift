@@ -19,6 +19,7 @@ class GameViewModel {
     let itemType$: Observable<ItemType>
     let gameScore$: Observable<Int>
     let dismissFlag$: Observable<Bool>
+    let popFlag$: Observable<Bool>
     
     let gameType = Variable<GameType>(.easy)
     let itemType = Variable<ItemType>(.macbook)
@@ -28,6 +29,7 @@ class GameViewModel {
     let itemTypeTrigger = PublishSubject<ItemType>()
     let gameScoreTrigger = PublishSubject<Int>()
     let dismissFlagTrigger = PublishSubject<Bool>()
+    let popFlagTrigger = PublishSubject<Bool>()
     
     init() {
         
@@ -63,6 +65,14 @@ class GameViewModel {
             .concat()
             .share(replay: 1)
         
+        popFlag$ = Observable
+            .of(
+                Observable.just(false),
+                popFlagTrigger.asObservable()
+            )
+            .concat()
+            .share(replay: 1)
+        
         gameType$
             .subscribe(onNext: { [weak self] type in
                 guard let wself = self else { return }
@@ -91,5 +101,16 @@ extension GameViewModel {
     func addGameScore() {
         let newScore = gameScore.value + 30
         gameScoreTrigger.onNext(newScore)
+    }
+    
+    func getImage(by itemType: ItemType) -> UIImage {
+        switch itemType {
+        case .macbook:
+            return R.image.img_macbook() ?? UIImage()
+        case .mixer:
+            return R.image.img_mixer() ?? UIImage()
+        case .watch:
+            return R.image.img_watch() ?? UIImage()
+        }
     }
 }

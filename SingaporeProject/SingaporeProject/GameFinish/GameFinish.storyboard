@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congraturations you've win" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQ5-Ud-tcB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations you've won" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQ5-Ud-tcB">
                                 <rect key="frame" x="20" y="68" width="374" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="KKw-sL-PIs"/>
@@ -51,8 +51,8 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vaucher!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCh-gl-ND7">
-                                <rect key="frame" x="137.5" y="614" width="139" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voucher!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCh-gl-ND7">
+                                <rect key="frame" x="136.5" y="614" width="141.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="MVE-oN-jPL"/>
                                 </constraints>
@@ -70,7 +70,7 @@
                                             <constraint firstAttribute="height" constant="80" id="uGc-jY-wfT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="44"/>
-                                        <state key="normal" title="Purchase">
+                                        <state key="normal" title="Go to Purchase">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
@@ -104,9 +104,18 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzH-IW-6hs">
+                                <rect key="frame" x="16" y="56" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="I0u-JK-9Gv"/>
+                                    <constraint firstAttribute="width" constant="44" id="cnj-wt-GWv"/>
+                                </constraints>
+                                <state key="normal" image="icon_back_nav"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hzH-IW-6hs" firstAttribute="top" secondItem="xeU-IU-vZd" secondAttribute="top" constant="12" id="0qp-tD-bt2"/>
                             <constraint firstItem="mm5-H7-iyd" firstAttribute="top" secondItem="DYV-fk-tXm" secondAttribute="bottom" constant="32" id="GkD-85-W0d"/>
                             <constraint firstItem="sxz-eY-zM9" firstAttribute="top" secondItem="mm5-H7-iyd" secondAttribute="bottom" constant="32" id="HyW-c3-yTE"/>
                             <constraint firstItem="hQ5-Ud-tcB" firstAttribute="top" secondItem="xeU-IU-vZd" secondAttribute="top" constant="24" id="LKg-6K-WBx"/>
@@ -115,6 +124,7 @@
                             <constraint firstItem="xeU-IU-vZd" firstAttribute="trailing" secondItem="hQ5-Ud-tcB" secondAttribute="trailing" constant="20" id="Rd4-hR-Zok"/>
                             <constraint firstItem="DYV-fk-tXm" firstAttribute="centerX" secondItem="ZYL-LL-MsZ" secondAttribute="centerX" id="RvO-xo-NsX"/>
                             <constraint firstItem="DCh-gl-ND7" firstAttribute="centerX" secondItem="ZYL-LL-MsZ" secondAttribute="centerX" id="Yru-fD-prx"/>
+                            <constraint firstItem="hzH-IW-6hs" firstAttribute="leading" secondItem="xeU-IU-vZd" secondAttribute="leading" constant="16" id="b5x-2Z-wUl"/>
                             <constraint firstItem="ZiX-AZ-xtz" firstAttribute="leading" secondItem="xeU-IU-vZd" secondAttribute="leading" id="cuc-6m-SRP"/>
                             <constraint firstItem="DCh-gl-ND7" firstAttribute="top" secondItem="sxz-eY-zM9" secondAttribute="bottom" constant="18" id="hTk-Y2-jAQ"/>
                             <constraint firstItem="sxz-eY-zM9" firstAttribute="centerX" secondItem="ZYL-LL-MsZ" secondAttribute="centerX" id="jSl-1A-RuQ"/>
@@ -125,6 +135,7 @@
                         <viewLayoutGuide key="safeArea" id="xeU-IU-vZd"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="hzH-IW-6hs" id="U1L-ti-Agr"/>
                         <outlet property="discountLabel" destination="DCh-gl-ND7" id="0C8-Cc-xRK"/>
                         <outlet property="itemImageView" destination="DYV-fk-tXm" id="vKU-pu-3WG"/>
                         <outlet property="itemLabel" destination="mm5-H7-iyd" id="PTJ-mN-9dx"/>
@@ -138,4 +149,7 @@
             <point key="canvasLocation" x="76.811594202898561" y="91.741071428571431"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_back_nav" width="24" height="24"/>
+    </resources>
 </document>

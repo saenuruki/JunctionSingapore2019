@@ -18,6 +18,7 @@ class GameFinishViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var discountLabel: UILabel!
     @IBOutlet weak var purchaseButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     fileprivate private(set) weak var viewModel: GameViewModel!
     fileprivate let bag = DisposeBag()
@@ -76,6 +77,16 @@ extension GameFinishViewController {
             .subscribe(onNext: { [weak self] in
                 guard let wself = self else { return }
                 print("tapしたよ")
+            })
+            .disposed(by: bag)
+        
+        backButton
+            .rx.tap
+            .throttle(0.7, latest: false, scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                guard let wself = self else { return }
+                wself.viewModel.popFlagTrigger.onNext(true)
+                wself.navigationController?.popViewController(animated: true)
             })
             .disposed(by: bag)
     }

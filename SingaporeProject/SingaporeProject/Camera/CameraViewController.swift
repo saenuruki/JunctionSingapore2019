@@ -19,6 +19,7 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     
     fileprivate let bag = DisposeBag()
+    fileprivate(set) var viewModel = CameraViewModel()
 
     var captureSession: AVCaptureSession!
     var stillImageOutput: AVCapturePhotoOutput?
@@ -28,6 +29,7 @@ class CameraViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         configureButton()
+        configureVM()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,6 +75,24 @@ extension CameraViewController {
             .subscribe(onNext: {[weak self] _ in
                 guard let wself = self else { return }
                 wself.navigationController?.popViewController(animated: true)
+            })
+            .disposed(by: bag)
+    }
+    
+    func configureVM() {
+        viewModel
+            .dismissFlag$
+            .subscribe(onNext: { [weak self] isDismissed in
+                guard let wself = self else { return }
+                //                wself.dismiss(animated: true, completion: {
+                //                    wself.inferDelegate.modalDidFinished(modalText: "hogehogehgoegheo")
+                //                })
+                // falseに戻す
+                if isDismissed {
+                    let vc = R.storyboard.gameStart.instantiateInitialViewController()!
+                    wself.navigationController?.pushViewController(vc, animated: true)
+                    wself.viewModel.dismissFlagTrigger.onNext(false)
+                }
             })
             .disposed(by: bag)
     }
@@ -127,7 +147,7 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
 //        // アルバムに追加.
 //        UIImageWriteToSavedPhotosAlbum(photo!, self, nil, nil)
 //
-        let vc = R.storyboard.cameraConfirm.instantiateInitialViewController()!
+        let vc = CameraConfirmViewController.create(viewModel: viewModel)
         vc.modalPresentationStyle = .custom
         vc.transitioningDelegate = self
         present(vc, animated: true, completion: nil)

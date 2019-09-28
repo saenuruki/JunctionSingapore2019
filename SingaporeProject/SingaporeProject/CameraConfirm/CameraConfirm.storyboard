@@ -102,8 +102,8 @@
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="zcO-hY-jIh" id="8Aa-kE-nQD"/>
-                        <outlet property="gameButton" destination="RJj-LP-Fvz" id="hft-ZW-Uca"/>
-                        <outlet property="gameView" destination="9jC-ge-iWC" id="CzG-Xm-bYz"/>
+                        <outlet property="gameButton" destination="RJj-LP-Fvz" id="vKS-tG-UgE"/>
+                        <outlet property="gameVuew" destination="9jC-ge-iWC" id="3OL-Pu-SKg"/>
                         <outlet property="popUpView" destination="AgH-GL-beO" id="dUk-Rq-rqS"/>
                     </connections>
                 </viewController>

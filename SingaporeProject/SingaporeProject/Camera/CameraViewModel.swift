@@ -16,7 +16,19 @@ class CameraViewModel {
     
     let bag = DisposeBag()
     
-    init() {}
+    let dismissFlag$: Observable<Bool>
+    let dismissFlagTrigger = PublishSubject<Bool>()
+    
+    init() {
+        
+        dismissFlag$ = Observable
+            .of(
+                Observable.just(false),
+                dismissFlagTrigger.asObservable()
+            )
+            .concat()
+            .share(replay: 1)
+    }
 }
 
 extension CameraViewModel {

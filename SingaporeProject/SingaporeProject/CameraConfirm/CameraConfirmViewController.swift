@@ -15,10 +15,11 @@ class CameraConfirmViewController: UIViewController {
     
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var gameVuew: UIView!
     @IBOutlet weak var gameButton: UIButton!
-    @IBOutlet weak var gameView: UIView!
     
     fileprivate let bag = DisposeBag()
+    fileprivate private(set) weak var viewModel: CameraViewModel!
     
     fileprivate var initialTouchPoint: CGPoint = CGPoint(x: 0,y: 0)
     fileprivate lazy var panGestureRecognizer: UIPanGestureRecognizer = {
@@ -26,6 +27,12 @@ class CameraConfirmViewController: UIViewController {
         recognizer.delegate = self
         return recognizer
     }()
+    
+    static func create(viewModel: CameraViewModel) -> UIViewController {
+        let vc = R.storyboard.cameraConfirm.instantiateInitialViewController()!
+        vc.viewModel = viewModel
+        return vc
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +56,8 @@ extension CameraConfirmViewController {
         popUpView.layer.cornerRadius = 10
         popUpView.layer.masksToBounds = true
         
-        gameView.layer.cornerRadius = 32
-        gameView.layer.masksToBounds = true
+        gameVuew.layer.cornerRadius = 32
+        gameVuew.layer.masksToBounds = true
     }
     
     private func configureButton() {
@@ -62,8 +69,7 @@ extension CameraConfirmViewController {
                 guard let wself = self else { return }
                 wself.dismiss(animated: false, completion: {
                     // 親のViewControllerも閉じるためのフラグを立てる
-                    let vc = R.storyboard.gameStart.instantiateInitialViewController()!
-                    wself.parent?.navigationController?.pushViewController(vc, animated: true)
+                    wself.viewModel.dismissFlagTrigger.onNext(true)
                 })
             })
             .disposed(by: bag)

@@ -33,7 +33,7 @@ class MainTabBarController: UITabBarController {
     fileprivate func createViewControllers() -> [UIViewController] {
 
         let arAdminViewController = R.storyboard.arAdmin.instantiateInitialViewController()!
-        let arGuestViewController = R.storyboard.arGuest.instantiateInitialViewController()!
+        let arGuestViewController = R.storyboard.gamePlayer.instantiateInitialViewController()!
 
         let arAdmninNVC = createFirstViewController(arAdminViewController)
         arAdmninNVC.tabBarItem = createTabBarItem(tabData: createImagePair(tabType: .arAdmin))

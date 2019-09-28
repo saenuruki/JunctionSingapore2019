@@ -16,9 +16,38 @@
                     <view key="view" contentMode="scaleToFill" id="KYJ-dR-Qta">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cA-QO-f7S">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kQx-KT-a4s" id="KzD-Fr-cAj"/>
+                                </connections>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVD-Zq-NIg">
+                                <rect key="frame" x="169" y="108" width="76" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="DSJ-pb-k2e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IVD-Zq-NIg" firstAttribute="top" secondItem="3lm-SD-guP" secondAttribute="top" constant="64" id="7fD-tw-8j3"/>
+                            <constraint firstItem="IVD-Zq-NIg" firstAttribute="centerX" secondItem="KYJ-dR-Qta" secondAttribute="centerX" id="8TH-yi-Ye7"/>
+                            <constraint firstItem="9cA-QO-f7S" firstAttribute="top" secondItem="KYJ-dR-Qta" secondAttribute="top" id="Vew-Bh-MxI"/>
+                            <constraint firstItem="3lm-SD-guP" firstAttribute="trailing" secondItem="9cA-QO-f7S" secondAttribute="trailing" id="oJ3-s9-fiR"/>
+                            <constraint firstAttribute="bottom" secondItem="9cA-QO-f7S" secondAttribute="bottom" id="xGc-2B-6Hb"/>
+                            <constraint firstItem="9cA-QO-f7S" firstAttribute="leading" secondItem="3lm-SD-guP" secondAttribute="leading" id="xhj-LZ-Z2T"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3lm-SD-guP"/>
                     </view>
+                    <connections>
+                        <outlet property="hitLabel" destination="IVD-Zq-NIg" id="0a5-8P-PQX"/>
+                        <outlet property="sceneView" destination="9cA-QO-f7S" id="d9M-5z-ymR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6i-FV-rSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

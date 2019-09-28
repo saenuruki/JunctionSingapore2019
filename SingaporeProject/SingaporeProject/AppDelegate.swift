@@ -17,9 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let firstViewController = createFirstViewController()
+//        let firstViewController = createFirstViewController()
         
-        self.window?.rootViewController = firstViewController
+        let homeViewController = R.storyboard.home.instantiateInitialViewController()!
+        let homeNVC = createFirstViewController(homeViewController)
+        self.window?.rootViewController = homeNVC
         self.window?.makeKeyAndVisible()
         
         FirebaseApp.configure()
@@ -54,10 +56,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     
-    func createFirstViewController() -> UIViewController {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateInitialViewController() as! MainTabBarController
-        return viewController
+//    func createFirstViewController() -> UIViewController {
+//
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let viewController = storyboard.instantiateInitialViewController() as! MainTabBarController
+//        return viewController
+//    }
+    
+    func createFirstViewController(_ viewController: UIViewController) -> UINavigationController {
+        let navigationController = UINavigationController()
+        navigationController.view.backgroundColor = .white
+        let firstViewController = viewController
+        navigationController.viewControllers = [firstViewController]
+        navigationController.setNavigationBarHidden(true, animated: false)
+        return navigationController
     }
 }

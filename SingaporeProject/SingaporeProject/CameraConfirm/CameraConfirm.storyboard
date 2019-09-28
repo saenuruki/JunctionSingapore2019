@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Camera Confirm View Controller-->
         <scene sceneID="gMU-5G-7IS">
             <objects>
-                <viewController id="Bt9-ss-kIh" sceneMemberID="viewController">
+                <viewController id="Bt9-ss-kIh" customClass="CameraConfirmViewController" customModule="SingaporeProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V1x-LY-Lsi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jC-ge-iWC">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jC-ge-iWC" customClass="GradientView" customModule="SingaporeProject" customModuleProvider="target">
                                         <rect key="frame" x="132" y="350" width="64" height="64"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_cannon" translatesAutoresizingMaskIntoConstraints="NO" id="N4a-33-pQL">
@@ -45,14 +45,41 @@
                                                     <constraint firstAttribute="width" constant="44" id="l0X-Na-mNy"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJj-LP-Fvz">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="3LK-Vo-Vko"/>
+                                            <constraint firstAttribute="bottom" secondItem="RJj-LP-Fvz" secondAttribute="bottom" id="9mD-xn-E6c"/>
                                             <constraint firstItem="N4a-33-pQL" firstAttribute="centerY" secondItem="9jC-ge-iWC" secondAttribute="centerY" id="H7f-CF-LoN"/>
+                                            <constraint firstItem="RJj-LP-Fvz" firstAttribute="top" secondItem="9jC-ge-iWC" secondAttribute="top" id="MzD-5G-mh6"/>
+                                            <constraint firstAttribute="trailing" secondItem="RJj-LP-Fvz" secondAttribute="trailing" id="Yah-l2-ndv"/>
                                             <constraint firstItem="N4a-33-pQL" firstAttribute="centerX" secondItem="9jC-ge-iWC" secondAttribute="centerX" id="jiM-qM-1e5"/>
                                             <constraint firstAttribute="width" constant="64" id="rLT-SN-0Yz"/>
+                                            <constraint firstItem="RJj-LP-Fvz" firstAttribute="leading" secondItem="9jC-ge-iWC" secondAttribute="leading" id="uV2-VX-fYK"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                                <color key="value" red="0.80784313730000001" green="0.031372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                                <color key="value" red="0.95686274510000002" green="0.55294117649999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="startPointX">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="startPointY">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="endPointX">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="endPointY">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -73,6 +100,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Un9-Ef-ZIy"/>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="zcO-hY-jIh" id="8Aa-kE-nQD"/>
+                        <outlet property="gameButton" destination="RJj-LP-Fvz" id="hft-ZW-Uca"/>
+                        <outlet property="gameView" destination="9jC-ge-iWC" id="CzG-Xm-bYz"/>
+                        <outlet property="popUpView" destination="AgH-GL-beO" id="dUk-Rq-rqS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2pk-1M-aTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

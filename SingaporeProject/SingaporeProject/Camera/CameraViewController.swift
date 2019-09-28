@@ -127,10 +127,10 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
 //        // アルバムに追加.
 //        UIImageWriteToSavedPhotosAlbum(photo!, self, nil, nil)
 //
-//        let vc = CameraConfirmViewController.create(viewModel: viewModel, searchViewModel: searchViewModel)
-//        vc.modalPresentationStyle = .custom
-//        vc.transitioningDelegate = self
-//        present(vc, animated: true, completion: nil)
+        let vc = R.storyboard.cameraConfirm.instantiateInitialViewController()!
+        vc.modalPresentationStyle = .custom
+        vc.transitioningDelegate = self
+        present(vc, animated: true, completion: nil)
     }
 }
 

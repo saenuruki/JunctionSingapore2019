@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		51FDCA9E2F67AC5002C2779B /* Pods_SingaporeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAA080908765DFA08612A0E /* Pods_SingaporeProject.framework */; };
 		7AB0371F557C9D0B17748F68 /* Pods_SingaporeProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5400508A0B0908271B4FAE3 /* Pods_SingaporeProjectTests.framework */; };
+		A0DB9063233F750E007874B3 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB9061233F7490007874B3 /* GameStartViewController.swift */; };
 		BA0A65F5233F572C00B7D4B1 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A65F4233F572C00B7D4B1 /* Home.storyboard */; };
 		BA0A65F7233F575700B7D4B1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A65F6233F575700B7D4B1 /* HomeViewController.swift */; };
 		BA0A65F9233F576B00B7D4B1 /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A65F8233F576B00B7D4B1 /* ItemDetail.storyboard */; };
 		BA0A65FB233F578E00B7D4B1 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A65FA233F578E00B7D4B1 /* ItemDetailViewController.swift */; };
 		BA0A65FD233F581E00B7D4B1 /* GameStart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A65FC233F581E00B7D4B1 /* GameStart.storyboard */; };
-		BA0A65FF233F583300B7D4B1 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A65FE233F583300B7D4B1 /* GameStartViewController.swift */; };
 		BA0A6601233F583E00B7D4B1 /* GameStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6600233F583E00B7D4B1 /* GameStartViewModel.swift */; };
 		BA0A6603233F596200B7D4B1 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A6602233F596200B7D4B1 /* Camera.storyboard */; };
 		BA0A6605233F597F00B7D4B1 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6604233F597F00B7D4B1 /* CameraViewController.swift */; };
@@ -86,12 +86,12 @@
 		6C8170E6C15368CF2BCD7354 /* Pods_SingaporeProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingaporeProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F469471E77E333F1CBEA385 /* Pods-SingaporeProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingaporeProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-SingaporeProjectUITests/Pods-SingaporeProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		761323094688A38CE5D64C76 /* Pods-SingaporeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingaporeProject.debug.xcconfig"; path = "Target Support Files/Pods-SingaporeProject/Pods-SingaporeProject.debug.xcconfig"; sourceTree = "<group>"; };
+		A0DB9061233F7490007874B3 /* GameStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
 		BA0A65F4233F572C00B7D4B1 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BA0A65F6233F575700B7D4B1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BA0A65F8233F576B00B7D4B1 /* ItemDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetail.storyboard; sourceTree = "<group>"; };
 		BA0A65FA233F578E00B7D4B1 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		BA0A65FC233F581E00B7D4B1 /* GameStart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameStart.storyboard; sourceTree = "<group>"; };
-		BA0A65FE233F583300B7D4B1 /* GameStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
 		BA0A6600233F583E00B7D4B1 /* GameStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewModel.swift; sourceTree = "<group>"; };
 		BA0A6602233F596200B7D4B1 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		BA0A6604233F597F00B7D4B1 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -228,8 +228,8 @@
 		BA0A65F1233F570000B7D4B1 /* GameStart */ = {
 			isa = PBXGroup;
 			children = (
+				A0DB9061233F7490007874B3 /* GameStartViewController.swift */,
 				BA0A65FC233F581E00B7D4B1 /* GameStart.storyboard */,
-				BA0A65FE233F583300B7D4B1 /* GameStartViewController.swift */,
 				BA0A6600233F583E00B7D4B1 /* GameStartViewModel.swift */,
 			);
 			path = GameStart;
@@ -709,11 +709,11 @@
 				BA0A660D233F5A0B00B7D4B1 /* GamePlayerViewModel.swift in Sources */,
 				BA76564F233DB85300C0ADD1 /* FirestoreManager.swift in Sources */,
 				BA765645233DAA9D00C0ADD1 /* ARGuestViewController.swift in Sources */,
+				A0DB9063233F750E007874B3 /* GameStartViewController.swift in Sources */,
 				BA765664233DC70F00C0ADD1 /* ObtainBenefitViewController.swift in Sources */,
 				BA76565F233DC45000C0ADD1 /* CustomPresentationController.swift in Sources */,
 				BA0A65F7233F575700B7D4B1 /* HomeViewController.swift in Sources */,
 				BA765656233DBB6C00C0ADD1 /* ARAdminViewModel.swift in Sources */,
-				BA0A65FF233F583300B7D4B1 /* GameStartViewController.swift in Sources */,
 				BA765659233DBC7A00C0ADD1 /* Event.swift in Sources */,
 				BA0A660B233F59C100B7D4B1 /* GamePlayerViewController.swift in Sources */,
 				BA765654233DBB4600C0ADD1 /* PickerFloatingPanelViewController.swift in Sources */,
@@ -903,8 +903,9 @@
 			baseConfigurationReference = 761323094688A38CE5D64C76 /* Pods-SingaporeProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 679U29FZ6S;
+				DEVELOPMENT_TEAM = DEQ82W9GTZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -917,6 +918,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.junctionx.SingaporeProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -927,8 +929,9 @@
 			baseConfigurationReference = 645F046212636E883AE7C6F8 /* Pods-SingaporeProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 679U29FZ6S;
+				DEVELOPMENT_TEAM = DEQ82W9GTZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -941,6 +944,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.junctionx.SingaporeProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

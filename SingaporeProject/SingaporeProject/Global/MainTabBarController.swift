@@ -16,6 +16,7 @@ class MainTabBarController: UITabBarController {
     enum TabType: String {
         case arAdmin = "ARAdmin"
         case arGuest = "ARGuest"
+        case home = "Home"
     }
 
     override func viewDidLoad() {
@@ -34,14 +35,18 @@ class MainTabBarController: UITabBarController {
 
         let arAdminViewController = R.storyboard.arAdmin.instantiateInitialViewController()!
         let arGuestViewController = R.storyboard.gamePlayer.instantiateInitialViewController()!
+        let homeViewController = R.storyboard.home.instantiateInitialViewController()!
 
         let arAdmninNVC = createFirstViewController(arAdminViewController)
         arAdmninNVC.tabBarItem = createTabBarItem(tabData: createImagePair(tabType: .arAdmin))
 
         let arGuestNVC = createFirstViewController(arGuestViewController)
         arGuestNVC.tabBarItem = createTabBarItem(tabData: createImagePair(tabType: .arGuest))
+        
+        let homeNVC = createFirstViewController(homeViewController)
+        homeNVC.tabBarItem = createTabBarItem(tabData: createImagePair(tabType: .home))
 
-        return [arAdmninNVC, arGuestNVC]
+        return [arAdmninNVC, arGuestNVC, homeNVC]
     }
 
     fileprivate func createTabBarItem(tabData: Tab) -> UITabBarItem {
@@ -60,6 +65,8 @@ class MainTabBarController: UITabBarController {
         case .arAdmin:
             return (R.image.icon_sample_white(), R.image.icon_sample_color(), tabType.rawValue)
         case .arGuest:
+            return (R.image.icon_sample_white(), R.image.icon_sample_color(), tabType.rawValue)
+        case .home:
             return (R.image.icon_sample_white(), R.image.icon_sample_color(), tabType.rawValue)
         }
     }

@@ -10,6 +10,13 @@ import UIKit
 
 class GameFinishViewController: UIViewController {
     
+    @IBOutlet weak var itemImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var itemLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var discountLabel: UILabel!
+    @IBOutlet weak var purchaseButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

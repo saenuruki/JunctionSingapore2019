@@ -10,6 +10,8 @@ import UIKit
 
 class ItemDetailViewController: UIViewController {
     
+    @IBOutlet weak var itemImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

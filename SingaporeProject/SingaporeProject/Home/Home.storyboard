@@ -20,21 +20,38 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-Home" translatesAutoresizingMaskIntoConstraints="NO" id="ogl-ay-YbX">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9i5-Ot-bzv">
-                                <rect key="frame" x="328" y="64" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9i5-Ot-bzv">
+                                <rect key="frame" x="310" y="64" width="64" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="BIk-Vf-qyH"/>
+                                    <constraint firstAttribute="width" constant="64" id="WIt-CU-Ub9"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAR-FD-98W">
+                                <rect key="frame" x="0.0" y="101" width="414" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="RWp-x2-r1L"/>
+                                </constraints>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="oAR-FD-98W" firstAttribute="top" secondItem="tIa-pY-Vt3" secondAttribute="top" constant="57" id="B4V-5f-kSn"/>
+                            <constraint firstItem="oAR-FD-98W" firstAttribute="trailing" secondItem="tIa-pY-Vt3" secondAttribute="trailing" id="SUC-xC-Svs"/>
+                            <constraint firstItem="oAR-FD-98W" firstAttribute="leading" secondItem="tIa-pY-Vt3" secondAttribute="leading" id="ShL-Jt-e9S"/>
                             <constraint firstAttribute="bottom" secondItem="ogl-ay-YbX" secondAttribute="bottom" id="b01-Ql-95E"/>
                             <constraint firstItem="ogl-ay-YbX" firstAttribute="leading" secondItem="tIa-pY-Vt3" secondAttribute="leading" id="bpP-rz-fY1"/>
+                            <constraint firstItem="tIa-pY-Vt3" firstAttribute="trailing" secondItem="9i5-Ot-bzv" secondAttribute="trailing" constant="40" id="egd-on-XeV"/>
+                            <constraint firstItem="9i5-Ot-bzv" firstAttribute="top" secondItem="tIa-pY-Vt3" secondAttribute="top" constant="20" id="fhL-uk-ssY"/>
                             <constraint firstItem="ogl-ay-YbX" firstAttribute="top" secondItem="iOw-uf-Vbu" secondAttribute="top" id="ii4-HG-6UK"/>
                             <constraint firstItem="ogl-ay-YbX" firstAttribute="trailing" secondItem="tIa-pY-Vt3" secondAttribute="trailing" id="tKr-ht-nbs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tIa-pY-Vt3"/>
                     </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="9i5-Ot-bzv" id="a0M-3s-cnF"/>
+                        <outlet property="campaignButton" destination="oAR-FD-98W" id="4kX-Ap-Piz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P0h-z6-Ndm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

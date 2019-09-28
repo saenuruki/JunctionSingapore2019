@@ -115,28 +115,22 @@ extension CameraViewController {
         settingsForMonitoring.isHighResolutionPhotoEnabled = false
         self.stillImageOutput?.capturePhoto(with: settingsForMonitoring, delegate: self)
     }
-    
-    fileprivate func resetCachedAssets() {
-        imageManager.stopCachingImagesForAllAssets()
-        previousPreheatRect = .zero
-    }
 }
 
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
     
     // MMEO: - 写真撮影完了後に呼び出される
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        let imageData = photo.fileDataRepresentation()
-        
-        let photo = UIImage(data: imageData!)?.croppingToCenterSquare()
-        // アルバムに追加.
-        UIImageWriteToSavedPhotosAlbum(photo!, self, nil, nil)
-        viewModel.capturedImageTrigger.onNext(photo ?? UIImage())
-        
-        let vc = CameraConfirmViewController.create(viewModel: viewModel, searchViewModel: searchViewModel)
-        vc.modalPresentationStyle = .custom
-        vc.transitioningDelegate = self
-        present(vc, animated: true, completion: nil)
+//        let imageData = photo.fileDataRepresentation()
+//
+//        let photo = UIImage(data: imageData!)?.croppingToCenterSquare()
+//        // アルバムに追加.
+//        UIImageWriteToSavedPhotosAlbum(photo!, self, nil, nil)
+//
+//        let vc = CameraConfirmViewController.create(viewModel: viewModel, searchViewModel: searchViewModel)
+//        vc.modalPresentationStyle = .custom
+//        vc.transitioningDelegate = self
+//        present(vc, animated: true, completion: nil)
     }
 }
 

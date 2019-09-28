@@ -33,6 +33,7 @@ Carthage/
 ## Cocoapods
 Pods/
 Podfile.lock
+SingaporeProject/Pods/
 
 ## R.swift
 R.generated.swift

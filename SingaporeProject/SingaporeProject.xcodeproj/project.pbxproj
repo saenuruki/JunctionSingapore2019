@@ -26,6 +26,7 @@
 		BA0A6614233FAF3600B7D4B1 /* CameraConfirm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A6613233FAF3600B7D4B1 /* CameraConfirm.storyboard */; };
 		BA0A6616233FBC7A00B7D4B1 /* UIView+Gradation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6615233FBC7A00B7D4B1 /* UIView+Gradation.swift */; };
 		BA0A6618233FBDE000B7D4B1 /* CameraConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6617233FBDE000B7D4B1 /* CameraConfirmViewController.swift */; };
+		BA0A661C2340416400B7D4B1 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0A661B2340416300B7D4B1 /* art.scnassets */; };
 		BA76563C233DAA1300C0ADD1 /* ARAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA76563B233DAA1300C0ADD1 /* ARAdmin.storyboard */; };
 		BA76563F233DAA5300C0ADD1 /* ARGuest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA76563E233DAA5300C0ADD1 /* ARGuest.storyboard */; };
 		BA765641233DAA7400C0ADD1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765640233DAA7300C0ADD1 /* R.generated.swift */; };
@@ -105,6 +106,7 @@
 		BA0A6613233FAF3600B7D4B1 /* CameraConfirm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraConfirm.storyboard; sourceTree = "<group>"; };
 		BA0A6615233FBC7A00B7D4B1 /* UIView+Gradation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradation.swift"; sourceTree = "<group>"; };
 		BA0A6617233FBDE000B7D4B1 /* CameraConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraConfirmViewController.swift; sourceTree = "<group>"; };
+		BA0A661B2340416300B7D4B1 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		BA76563B233DAA1300C0ADD1 /* ARAdmin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARAdmin.storyboard; sourceTree = "<group>"; };
 		BA76563E233DAA5300C0ADD1 /* ARGuest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARGuest.storyboard; sourceTree = "<group>"; };
 		BA765640233DAA7300C0ADD1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 				BA765657233DBC6C00C0ADD1 /* Model */,
 				BACCF559233C8571000E83C8 /* AppDelegate.swift */,
 				BACCF560233C8572000E83C8 /* Assets.xcassets */,
+				BA0A661B2340416300B7D4B1 /* art.scnassets */,
 				BACCF562233C8572000E83C8 /* LaunchScreen.storyboard */,
 				BACCF565233C8572000E83C8 /* Info.plist */,
 				BA765649233DB26800C0ADD1 /* GoogleService-Info.plist */,
@@ -541,6 +544,7 @@
 				BA0A660F233F5A1B00B7D4B1 /* GameFinish.storyboard in Resources */,
 				BA76563C233DAA1300C0ADD1 /* ARAdmin.storyboard in Resources */,
 				BA0A65F5233F572C00B7D4B1 /* Home.storyboard in Resources */,
+				BA0A661C2340416400B7D4B1 /* art.scnassets in Resources */,
 				BA76563F233DAA5300C0ADD1 /* ARGuest.storyboard in Resources */,
 				BA0A65FD233F581E00B7D4B1 /* GameStart.storyboard in Resources */,
 				BACCF561233C8572000E83C8 /* Assets.xcassets in Resources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 import ARKit
+import SceneKit
 import RxSwift
 import RxCocoa
 
@@ -103,6 +104,9 @@ class GamePlayerViewController: UIViewController {
         sceneView.scene.physicsWorld.contactDelegate = self
         
         sceneView.scene.rootNode.addChildNode(boxNode)
+        
+//        let cubeScene = SCNScene(named: "art.scnassets/cannon.dae")!
+//        sceneView.scenerootNode.addChildNode(cubeScene)
         
         runTimer()
     }

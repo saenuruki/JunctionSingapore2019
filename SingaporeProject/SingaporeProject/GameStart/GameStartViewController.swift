@@ -163,6 +163,14 @@ extension GameStartViewController {
             .disposed(by: bag)
         
         viewModel
+            .itemType$
+            .subscribe(onNext: { [weak self] itemType in
+                guard let wself = self else { return }
+                wself.itemImageView.image = wself.viewModel.getImage(by: itemType)
+            })
+            .disposed(by: bag)
+        
+        viewModel
             .dismissFlag$
             .subscribe(onNext: { [weak self] isDismissed in
                 guard let wself = self else { return }

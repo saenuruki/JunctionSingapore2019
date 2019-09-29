@@ -78,7 +78,7 @@ class GamePlayerViewController: UIViewController {
         // 6面、別々のテクスチャを貼る
         let m1 = SCNMaterial()
 //        m1.diffuse.contents = R.image.img_macbook()
-        cube.firstMaterial?.diffuse.contents = R.image.img_macbook()
+        cube.firstMaterial?.diffuse.contents = self.viewModel.getImage(by: self.viewModel.itemType.value)
         
         // 初期位置の指定: 50cm画面奥、10cm上方に配置
         cubeNode.position = SCNVector3Make(0, 0, -1.5)

@@ -45,6 +45,8 @@ class CameraViewModel {
             .subscribe(onNext: { [weak self] itemType in
                 guard let wself = self else { return }
                 wself.itemType.value = itemType
+                print("=======================")
+                print(itemType)
             })
             .disposed(by: bag)
     }
@@ -55,26 +57,44 @@ extension CameraViewModel {
     func detectItemType(by predicts: [String]) {
         
         predicts.forEach { predictCategory in
-            if predictCategory.contains("notebook") {
+            if predictCategory.lowercased().contains("notebook") {
                 itemTypeTrigger.onNext(.macbook)
+                return
             }
-            else if predictCategory.contains("computer") {
+//            else if predictCategory.contains("computer") {
+//                itemTypeTrigger.onNext(.macbook)
+//            }
+            else if predictCategory.lowercased().contains("laptop") {
                 itemTypeTrigger.onNext(.macbook)
+                return
             }
-            else if predictCategory.contains("laptop") {
-                itemTypeTrigger.onNext(.macbook)
-            }
-            else if predictCategory.contains("digital") {
+            else if predictCategory.lowercased().contains("digital") {
                 itemTypeTrigger.onNext(.watch)
+                return
             }
-            else if predictCategory.contains("watch") {
+            else if predictCategory.lowercased().contains("watch") {
                 itemTypeTrigger.onNext(.watch)
+                return
             }
-            else if predictCategory.contains("glasses") {
+            else if predictCategory.lowercased().contains("glasses") {
                 itemTypeTrigger.onNext(.watch)
+                return
             }
-            else {
-                itemTypeTrigger.onNext(.macbook)
+            else if predictCategory.lowercased().contains("mouse") {
+                itemTypeTrigger.onNext(.watch)
+                return
+            }
+            else if predictCategory.lowercased().contains("glasses") {
+                itemTypeTrigger.onNext(.watch)
+                return
+            }
+            else if predictCategory.lowercased().contains("belt") {
+                itemTypeTrigger.onNext(.watch)
+                return
+            }
+            else if predictCategory.lowercased().contains("glasses") {
+                itemTypeTrigger.onNext(.watch)
+                return
             }
         }
     }

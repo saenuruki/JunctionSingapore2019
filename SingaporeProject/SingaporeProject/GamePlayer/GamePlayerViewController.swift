@@ -8,19 +8,20 @@
 
 import UIKit
 import ARKit
+import RxSwift
+import RxCocoa
 
 class GamePlayerViewController: UIViewController {
     
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var hitLabel: UILabel!
-//        {
-//        didSet {
-//            hitLabel.isHidden = true
-//        }
-//    }
-    fileprivate private(set) weak var viewModel: GameViewModel!
-
+    @IBOutlet weak var progressConstraint: NSLayoutConstraint!
+    @IBOutlet weak var progressView: UIView!
+    @IBOutlet weak var progressInnerView: UIView!
     
+    fileprivate private(set) weak var viewModel: GameViewModel!
+    fileprivate let bag = DisposeBag()
+
     var second: Double = 30.0
     var timer = Timer()
     
@@ -65,27 +66,18 @@ class GamePlayerViewController: UIViewController {
 //        node.scale = SCNVector3(x: 0.3, y: 0.3, z: 0.3)
 //        return node
         
-        let cube = SCNBox(width: 0.3, height: 0.3, length: 0.01, chamferRadius: 0)
+        let cube = SCNBox(width: 0.3, height: 0.3, length: 0.001, chamferRadius: 0)
+        cube.firstMaterial?.diffuse.contents = UIColor.white
         let cubeNode = SCNNode(geometry: cube)
         cubeNode.name = "box"
+        let shape = SCNPhysicsShape(geometry: cube, options: nil)
+        cubeNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: shape)
+        cubeNode.physicsBody?.isAffectedByGravity = false
         
         // 6面、別々のテクスチャを貼る
         let m1 = SCNMaterial()
-//        let m2 = SCNMaterial()
-//        let m3 = SCNMaterial()
-//        let m4 = SCNMaterial()
-//        let m5 = SCNMaterial()
-//        let m6 = SCNMaterial()
-        
-        m1.diffuse.contents = R.image.img_macbook()
-//        m2.diffuse.contents = R.image.img_macbook()
-//        m3.diffuse.contents = R.image.img_macbook()
-//        m4.diffuse.contents = R.image.img_macbook()
-//        m5.diffuse.contents = R.image.img_macbook()
-//        m6.diffuse.contents = R.image.img_macbook()
-//
-//        cube.materials = [m1, m2, m3, m4, m5, m6]
-        cube.firstMaterial = m1
+//        m1.diffuse.contents = R.image.img_macbook()
+        cube.firstMaterial?.diffuse.contents = R.image.img_macbook()
         
         // 初期位置の指定: 50cm画面奥、10cm上方に配置
         cubeNode.position = SCNVector3Make(0, 0, -1.5)
@@ -102,6 +94,9 @@ class GamePlayerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureUI()
+        configureVM()
         
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         sceneView.autoenablesDefaultLighting = true
@@ -126,7 +121,7 @@ class GamePlayerViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let ball = SCNSphere(radius: 0.1)
-        ball.firstMaterial?.diffuse.contents = UIColor.blue
+        ball.firstMaterial?.diffuse.contents = UIColor.darkGray
         
         let node = SCNNode(geometry: ball)
         node.name = "ball"
@@ -155,6 +150,32 @@ class GamePlayerViewController: UIViewController {
         sceneView.scene.rootNode.addChildNode(node)
     }
     
+}
+
+extension GamePlayerViewController {
+    
+    func configureUI() {
+        progressConstraint.constant = progressView.frame.width
+        progressInnerView.layoutIfNeeded()
+    }
+    
+    func configureVM() {
+        viewModel
+            .gameScore$
+            .subscribe(onNext: { [weak self] score in
+                guard let wself = self else { return }
+                if score >= 300 {
+                    wself.progressConstraint.constant = 0
+                }
+                else {
+                    let progressWidth: CGFloat = wself.progressView.frame.width
+                    let rightConstraint = progressWidth - (progressWidth * CGFloat(score) / 300.0)
+                    wself.progressConstraint.constant = rightConstraint
+                }
+                wself.progressInnerView.layoutIfNeeded()
+            })
+            .disposed(by: bag)
+    }
 }
 
 extension GamePlayerViewController: SCNPhysicsContactDelegate {

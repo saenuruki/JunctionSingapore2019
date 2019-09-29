@@ -15,7 +15,7 @@ enum GameType {
 }
 
 enum ItemType {
-    case macbook, watch, mixer
+    case macbook, watch, mixer, marketing
 }
 
 class GameStartViewController: UIViewController {
@@ -70,6 +70,9 @@ extension GameStartViewController {
         case .watch:
             itemImageView.image = R.image.img_watch()
             titleLabel.text = "CASIO G-SHOCK"
+        case .marketing:
+            itemImageView.image = R.image.img_marketing()
+            titleLabel.text = "Samsung Galaxy Watch"
         }
         
         easyView.layer.cornerRadius = 12

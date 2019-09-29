@@ -23,7 +23,7 @@ class GamePlayerViewController: UIViewController {
     fileprivate private(set) weak var viewModel: GameViewModel!
     fileprivate let bag = DisposeBag()
 
-    var second: Double = 30.0
+    var second: Double = 15.0
     var timer = Timer()
     
     let defaultConfiguration: ARWorldTrackingConfiguration = {

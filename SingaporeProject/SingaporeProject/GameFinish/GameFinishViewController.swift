@@ -49,23 +49,26 @@ extension GameFinishViewController {
     private func configureUI() {
         switch viewModel.gameType.value {
         case .easy:
-            priceLabel.text = "$ 1.00"
-        case .middle:
             priceLabel.text = "$ 5.00"
-        case .hard:
+        case .middle:
             priceLabel.text = "$ 10.00"
+        case .hard:
+            priceLabel.text = "$ 50.00"
         }
         
         switch viewModel.itemType.value {
         case .macbook:
             itemImageView.image =  R.image.img_macbook()
-            itemLabel.text = "MacBook Air 12"
+            itemLabel.text = "MacBook Air 13"
         case .mixer:
             itemImageView.image =  R.image.img_mixer()
             itemLabel.text = "Sencor Food Mixer"
         case .watch:
             itemImageView.image =  R.image.img_watch()
             itemLabel.text = "CASIO G-SHOCK"
+        case .marketing:
+            itemImageView.image =  R.image.img_marketing()
+            itemLabel.text = "Samsung Galaxy Watch"
         }
     }
     

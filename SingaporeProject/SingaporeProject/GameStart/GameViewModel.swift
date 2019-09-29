@@ -99,8 +99,17 @@ class GameViewModel {
 extension GameViewModel {
     
     func addGameScore() {
-        let newScore = gameScore.value + 5
-        gameScoreTrigger.onNext(newScore)
+        switch gameType.value {
+        case .easy:
+            let newScore = gameScore.value + 10
+            gameScoreTrigger.onNext(newScore)
+        case .middle:
+            let newScore = gameScore.value + 5
+            gameScoreTrigger.onNext(newScore)
+        case .hard:
+            let newScore = gameScore.value + 1
+            gameScoreTrigger.onNext(newScore)
+        }
     }
     
     func getImage(by itemType: ItemType) -> UIImage {
@@ -111,6 +120,8 @@ extension GameViewModel {
             return R.image.img_mixer() ?? UIImage()
         case .watch:
             return R.image.img_watch() ?? UIImage()
+        case .marketing:
+            return R.image.img_marketing() ?? UIImage()
         }
     }
 }

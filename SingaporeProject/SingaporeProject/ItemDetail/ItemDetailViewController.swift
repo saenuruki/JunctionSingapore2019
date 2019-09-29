@@ -52,7 +52,7 @@ extension ItemDetailViewController {
             .throttle(0.7, latest: false, scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
                 guard let wself = self else { return }
-                let vc = R.storyboard.gameStart.instantiateInitialViewController()!
+                let vc = GameStartViewController.create(itemType: .marketing)
                 wself.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: bag)

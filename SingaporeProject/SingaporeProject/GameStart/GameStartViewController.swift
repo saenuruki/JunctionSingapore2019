@@ -34,6 +34,12 @@ class GameStartViewController: UIViewController {
     fileprivate(set) var viewModel = GameViewModel()
     fileprivate let bag = DisposeBag()
     
+    static func create(itemType: ItemType) -> UIViewController {
+        let vc = R.storyboard.gameStart.instantiateInitialViewController()!
+        vc.viewModel.itemTypeTrigger.onNext(itemType)
+        return vc
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()

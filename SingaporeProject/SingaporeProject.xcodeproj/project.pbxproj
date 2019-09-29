@@ -27,6 +27,8 @@
 		BA0A6616233FBC7A00B7D4B1 /* UIView+Gradation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6615233FBC7A00B7D4B1 /* UIView+Gradation.swift */; };
 		BA0A6618233FBDE000B7D4B1 /* CameraConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6617233FBDE000B7D4B1 /* CameraConfirmViewController.swift */; };
 		BA0A661C2340416400B7D4B1 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0A661B2340416300B7D4B1 /* art.scnassets */; };
+		BA0A661E2340452F00B7D4B1 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BA0A661D2340452E00B7D4B1 /* MobileNet.mlmodel */; };
+		BA0A66202340470000B7D4B1 /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A661F2340470000B7D4B1 /* UIImage+extension.swift */; };
 		BA76563C233DAA1300C0ADD1 /* ARAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA76563B233DAA1300C0ADD1 /* ARAdmin.storyboard */; };
 		BA76563F233DAA5300C0ADD1 /* ARGuest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA76563E233DAA5300C0ADD1 /* ARGuest.storyboard */; };
 		BA765641233DAA7400C0ADD1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765640233DAA7300C0ADD1 /* R.generated.swift */; };
@@ -107,6 +109,8 @@
 		BA0A6615233FBC7A00B7D4B1 /* UIView+Gradation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradation.swift"; sourceTree = "<group>"; };
 		BA0A6617233FBDE000B7D4B1 /* CameraConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraConfirmViewController.swift; sourceTree = "<group>"; };
 		BA0A661B2340416300B7D4B1 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		BA0A661D2340452E00B7D4B1 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		BA0A661F2340470000B7D4B1 /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
 		BA76563B233DAA1300C0ADD1 /* ARAdmin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARAdmin.storyboard; sourceTree = "<group>"; };
 		BA76563E233DAA5300C0ADD1 /* ARGuest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARGuest.storyboard; sourceTree = "<group>"; };
 		BA765640233DAA7300C0ADD1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 				BA76564E233DB85300C0ADD1 /* FirestoreManager.swift */,
 				BA76565E233DC45000C0ADD1 /* CustomPresentationController.swift */,
 				BA0A6615233FBC7A00B7D4B1 /* UIView+Gradation.swift */,
+				BA0A661F2340470000B7D4B1 /* UIImage+extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 				BACCF565233C8572000E83C8 /* Info.plist */,
 				BA765649233DB26800C0ADD1 /* GoogleService-Info.plist */,
 				BA765640233DAA7300C0ADD1 /* R.generated.swift */,
+				BA0A661D2340452E00B7D4B1 /* MobileNet.mlmodel */,
 			);
 			path = SingaporeProject;
 			sourceTree = "<group>";
@@ -725,6 +731,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA76564C233DB45800C0ADD1 /* APIKeys.swift in Sources */,
+				BA0A661E2340452F00B7D4B1 /* MobileNet.mlmodel in Sources */,
 				BA76564F233DB85300C0ADD1 /* FirestoreManager.swift in Sources */,
 				BA765645233DAA9D00C0ADD1 /* ARGuestViewController.swift in Sources */,
 				A0DB9063233F750E007874B3 /* GameStartViewController.swift in Sources */,
@@ -742,6 +749,7 @@
 				BA76565D233DC41100C0ADD1 /* ARObject.swift in Sources */,
 				BA0A6607233F598900B7D4B1 /* CameraViewModel.swift in Sources */,
 				BA765643233DAA9000C0ADD1 /* ARAdminViewController.swift in Sources */,
+				BA0A66202340470000B7D4B1 /* UIImage+extension.swift in Sources */,
 				BACCF55A233C8571000E83C8 /* AppDelegate.swift in Sources */,
 				BA0A6601233F583E00B7D4B1 /* GameViewModel.swift in Sources */,
 				BA0A6605233F597F00B7D4B1 /* CameraViewController.swift in Sources */,

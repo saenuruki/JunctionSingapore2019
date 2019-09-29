@@ -23,8 +23,8 @@
                                     <outlet property="delegate" destination="kQx-KT-a4s" id="KzD-Fr-cAj"/>
                                 </connections>
                             </arscnView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 sec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVD-Zq-NIg">
-                                <rect key="frame" x="160" y="92" width="94.5" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVD-Zq-NIg">
+                                <rect key="frame" x="150.5" y="92" width="113.5" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="DSJ-pb-k2e"/>
                                 </constraints>

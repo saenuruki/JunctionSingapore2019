@@ -79,7 +79,8 @@ extension GameFinishViewController {
             .throttle(0.7, latest: false, scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
                 guard let wself = self else { return }
-                print("tapしたよ")
+                let vc = MarketingViewController.create(itemType: wself.viewModel.itemType.value)
+                wself.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: bag)
         

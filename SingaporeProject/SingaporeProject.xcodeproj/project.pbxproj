@@ -33,6 +33,8 @@
 		BA0A66252340533200B7D4B1 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A66242340533200B7D4B1 /* PurchaseViewController.swift */; };
 		BA0A6627234054C400B7D4B1 /* PurchaseTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0A6626234054C400B7D4B1 /* PurchaseTableCell.xib */; };
 		BA0A662A2340555000B7D4B1 /* Marketing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A66292340555000B7D4B1 /* Marketing.storyboard */; };
+		BA0A662C2340678D00B7D4B1 /* MarketingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A662B2340678D00B7D4B1 /* MarketingViewController.swift */; };
+		BA0A662E234068BA00B7D4B1 /* MarketingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A662D234068BA00B7D4B1 /* MarketingViewModel.swift */; };
 		BA76563C233DAA1300C0ADD1 /* ARAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA76563B233DAA1300C0ADD1 /* ARAdmin.storyboard */; };
 		BA76563F233DAA5300C0ADD1 /* ARGuest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA76563E233DAA5300C0ADD1 /* ARGuest.storyboard */; };
 		BA765641233DAA7400C0ADD1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765640233DAA7300C0ADD1 /* R.generated.swift */; };
@@ -119,6 +121,8 @@
 		BA0A66242340533200B7D4B1 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		BA0A6626234054C400B7D4B1 /* PurchaseTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseTableCell.xib; sourceTree = "<group>"; };
 		BA0A66292340555000B7D4B1 /* Marketing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Marketing.storyboard; sourceTree = "<group>"; };
+		BA0A662B2340678D00B7D4B1 /* MarketingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketingViewController.swift; sourceTree = "<group>"; };
+		BA0A662D234068BA00B7D4B1 /* MarketingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketingViewModel.swift; sourceTree = "<group>"; };
 		BA76563B233DAA1300C0ADD1 /* ARAdmin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARAdmin.storyboard; sourceTree = "<group>"; };
 		BA76563E233DAA5300C0ADD1 /* ARGuest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARGuest.storyboard; sourceTree = "<group>"; };
 		BA765640233DAA7300C0ADD1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				BA0A66292340555000B7D4B1 /* Marketing.storyboard */,
+				BA0A662B2340678D00B7D4B1 /* MarketingViewController.swift */,
+				BA0A662D234068BA00B7D4B1 /* MarketingViewModel.swift */,
 			);
 			path = Marketing;
 			sourceTree = "<group>";
@@ -762,6 +768,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA76564C233DB45800C0ADD1 /* APIKeys.swift in Sources */,
+				BA0A662C2340678D00B7D4B1 /* MarketingViewController.swift in Sources */,
 				BA0A661E2340452F00B7D4B1 /* MobileNet.mlmodel in Sources */,
 				BA0A66252340533200B7D4B1 /* PurchaseViewController.swift in Sources */,
 				BA76564F233DB85300C0ADD1 /* FirestoreManager.swift in Sources */,
@@ -770,6 +777,7 @@
 				BA765664233DC70F00C0ADD1 /* ObtainBenefitViewController.swift in Sources */,
 				BA0A6616233FBC7A00B7D4B1 /* UIView+Gradation.swift in Sources */,
 				BA76565F233DC45000C0ADD1 /* CustomPresentationController.swift in Sources */,
+				BA0A662E234068BA00B7D4B1 /* MarketingViewModel.swift in Sources */,
 				BA0A65F7233F575700B7D4B1 /* HomeViewController.swift in Sources */,
 				BA765656233DBB6C00C0ADD1 /* ARAdminViewModel.swift in Sources */,
 				BA765659233DBC7A00C0ADD1 /* Event.swift in Sources */,

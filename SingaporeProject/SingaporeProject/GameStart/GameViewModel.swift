@@ -99,7 +99,7 @@ class GameViewModel {
 extension GameViewModel {
     
     func addGameScore() {
-        let newScore = gameScore.value + 10
+        let newScore = gameScore.value + 5
         gameScoreTrigger.onNext(newScore)
     }
     

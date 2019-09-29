@@ -29,6 +29,10 @@
 		BA0A661C2340416400B7D4B1 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0A661B2340416300B7D4B1 /* art.scnassets */; };
 		BA0A661E2340452F00B7D4B1 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BA0A661D2340452E00B7D4B1 /* MobileNet.mlmodel */; };
 		BA0A66202340470000B7D4B1 /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A661F2340470000B7D4B1 /* UIImage+extension.swift */; };
+		BA0A66232340525000B7D4B1 /* Purchase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A66222340525000B7D4B1 /* Purchase.storyboard */; };
+		BA0A66252340533200B7D4B1 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A66242340533200B7D4B1 /* PurchaseViewController.swift */; };
+		BA0A6627234054C400B7D4B1 /* PurchaseTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0A6626234054C400B7D4B1 /* PurchaseTableCell.xib */; };
+		BA0A662A2340555000B7D4B1 /* Marketing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0A66292340555000B7D4B1 /* Marketing.storyboard */; };
 		BA76563C233DAA1300C0ADD1 /* ARAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA76563B233DAA1300C0ADD1 /* ARAdmin.storyboard */; };
 		BA76563F233DAA5300C0ADD1 /* ARGuest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA76563E233DAA5300C0ADD1 /* ARGuest.storyboard */; };
 		BA765641233DAA7400C0ADD1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA765640233DAA7300C0ADD1 /* R.generated.swift */; };
@@ -111,6 +115,10 @@
 		BA0A661B2340416300B7D4B1 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		BA0A661D2340452E00B7D4B1 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		BA0A661F2340470000B7D4B1 /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
+		BA0A66222340525000B7D4B1 /* Purchase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Purchase.storyboard; sourceTree = "<group>"; };
+		BA0A66242340533200B7D4B1 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		BA0A6626234054C400B7D4B1 /* PurchaseTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseTableCell.xib; sourceTree = "<group>"; };
+		BA0A66292340555000B7D4B1 /* Marketing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Marketing.storyboard; sourceTree = "<group>"; };
 		BA76563B233DAA1300C0ADD1 /* ARAdmin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARAdmin.storyboard; sourceTree = "<group>"; };
 		BA76563E233DAA5300C0ADD1 /* ARGuest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARGuest.storyboard; sourceTree = "<group>"; };
 		BA765640233DAA7300C0ADD1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -272,6 +280,24 @@
 			path = CameraConfirm;
 			sourceTree = "<group>";
 		};
+		BA0A66212340522900B7D4B1 /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				BA0A66222340525000B7D4B1 /* Purchase.storyboard */,
+				BA0A66242340533200B7D4B1 /* PurchaseViewController.swift */,
+				BA0A6626234054C400B7D4B1 /* PurchaseTableCell.xib */,
+			);
+			path = Purchase;
+			sourceTree = "<group>";
+		};
+		BA0A66282340551B00B7D4B1 /* Marketing */ = {
+			isa = PBXGroup;
+			children = (
+				BA0A66292340555000B7D4B1 /* Marketing.storyboard */,
+			);
+			path = Marketing;
+			sourceTree = "<group>";
+		};
 		BA76563A233DA9C200C0ADD1 /* ARAdmin */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +391,8 @@
 		BACCF558233C8571000E83C8 /* SingaporeProject */ = {
 			isa = PBXGroup;
 			children = (
+				BA0A66282340551B00B7D4B1 /* Marketing */,
+				BA0A66212340522900B7D4B1 /* Purchase */,
 				BA0A6612233FAF2800B7D4B1 /* CameraConfirm */,
 				BA0A65F3233F571700B7D4B1 /* GameFinish */,
 				BA0A65F2233F570D00B7D4B1 /* GamePlayer */,
@@ -541,6 +569,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA0A662A2340555000B7D4B1 /* Marketing.storyboard in Resources */,
 				BA0A6609233F599A00B7D4B1 /* GamePlayer.storyboard in Resources */,
 				BA0A65F9233F576B00B7D4B1 /* ItemDetail.storyboard in Resources */,
 				BA0A6603233F596200B7D4B1 /* Camera.storyboard in Resources */,
@@ -552,9 +581,11 @@
 				BA0A65F5233F572C00B7D4B1 /* Home.storyboard in Resources */,
 				BA0A661C2340416400B7D4B1 /* art.scnassets in Resources */,
 				BA76563F233DAA5300C0ADD1 /* ARGuest.storyboard in Resources */,
+				BA0A66232340525000B7D4B1 /* Purchase.storyboard in Resources */,
 				BA0A65FD233F581E00B7D4B1 /* GameStart.storyboard in Resources */,
 				BACCF561233C8572000E83C8 /* Assets.xcassets in Resources */,
 				BACCF55F233C8571000E83C8 /* Main.storyboard in Resources */,
+				BA0A6627234054C400B7D4B1 /* PurchaseTableCell.xib in Resources */,
 				BA765652233DB9B900C0ADD1 /* PickerFloatingPanel.storyboard in Resources */,
 				BA76564A233DB26800C0ADD1 /* GoogleService-Info.plist in Resources */,
 			);
@@ -732,6 +763,7 @@
 			files = (
 				BA76564C233DB45800C0ADD1 /* APIKeys.swift in Sources */,
 				BA0A661E2340452F00B7D4B1 /* MobileNet.mlmodel in Sources */,
+				BA0A66252340533200B7D4B1 /* PurchaseViewController.swift in Sources */,
 				BA76564F233DB85300C0ADD1 /* FirestoreManager.swift in Sources */,
 				BA765645233DAA9D00C0ADD1 /* ARGuestViewController.swift in Sources */,
 				A0DB9063233F750E007874B3 /* GameStartViewController.swift in Sources */,
